@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<article class="notebook">
+  <header class="notebook-header">
+    <h1 class="notebook-title">{{ page.title | escape }}</h1>
+    <div class="notebook-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {%- if page.author -%}
+        • <span class="author">{{ page.author }}</span>
+      {%- endif -%}
+      {%- if page.notebook_type -%}
+        • <span class="notebook-type">{{ page.notebook_type }}</span>
+      {%- endif -%}
+    </div>
+    
+    {%- if page.description -%}
+      <div class="notebook-description">
+        {{ page.description }}
+      </div>
+    {%- endif -%}
+    
+    {%- if page.github_repo -%}
+      <div class="notebook-links">
+        <a href="{{ page.github_repo }}" class="github-link" target="_blank">
+          📁 View on GitHub
+        </a>
+        {%- if page.notebook_file -%}
+          <a href="{{ page.notebook_file }}" class="notebook-download" target="_blank">
+            📓 Download Notebook
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </header>
+
+  <div class="notebook-content">
+    {{ content }}
+  </div>
+
+  {%- if page.technologies.size > 0 -%}
+    <div class="notebook-technologies">
+      <strong>Technologies Used:</strong>
+      {%- for tech in page.technologies -%}
+        <span class="tech-tag">{{ tech }}</span>{% unless forloop.last %}, {% endunless %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if page.key_findings -%}
+    <div class="key-findings">
+      <h3>Key Findings</h3>
+      {{ page.key_findings | markdownify }}
+    </div>
+  {%- endif -%}
+
+  <nav class="notebook-navigation">
+    {%- assign notebooks = site.notebooks | sort: 'date' -%}
+    {%- for notebook in notebooks -%}
+      {%- if notebook.url == page.url -%}
+        {%- assign current_index = forloop.index0 -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    
+    {%- if current_index > 0 -%}
+      {%- assign prev_notebook = notebooks[current_index-1] -%}
+      <a class="prev" href="{{ prev_notebook.url | relative_url }}">&larr; {{ prev_notebook.title }}</a>
+    {%- endif -%}
+    
+    {%- assign next_index = current_index | plus: 1 -%}
+    {%- if next_index < notebooks.size -%}
+      {%- assign next_notebook = notebooks[next_index] -%}
+      <a class="next" href="{{ next_notebook.url | relative_url }}">{{ next_notebook.title }} &rarr;</a>
+    {%- endif -%}
+  </nav>
+</article>

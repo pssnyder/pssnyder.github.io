@@ -1,0 +1,64 @@
+# Site settings
+title: "Pat Snyder - Project Portfolio & Journal"
+description: "A living portfolio documenting data science projects, chess engine development, and technical explorations"
+baseurl: ""
+url: "https://pssnyder.github.io"
+github_username: pssnyder
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  notebooks:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Pat Snyder"
+  - scope:
+      path: "_notebooks"
+      type: "notebooks"
+    values:
+      layout: "notebook"
+      author: "Pat Snyder"
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: "project"
+      author: "Pat Snyder"
+
+# Notebook conversion settings
+notebook_conversion:
+  input_dir: "_notebooks"
+  output_dir: "_posts"
+  
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/

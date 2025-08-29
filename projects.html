@@ -1,0 +1,326 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<div class="projects-archive">
+  <header class="page-header">
+    <h1>Featured Projects</h1>
+    <p class="page-description">
+      A showcase of significant technical projects, from chess engine development to data science applications. 
+      Each project includes comprehensive documentation, analysis, and lessons learned.
+    </p>
+  </header>
+
+  {% if site.projects.size > 0 %}
+    {% assign projects_by_status = site.projects | sort: 'start_date' | reverse | group_by: 'status' %}
+    {% assign status_order = 'Active,Completed,Planning,Archived' | split: ',' %}
+    
+    {% for status in status_order %}
+      {% assign status_group = projects_by_status | where: 'name', status | first %}
+      {% if status_group.items.size > 0 %}
+        <section class="projects-status-section">
+          <h2 class="status-heading">
+            {{ status }} Projects 
+            <span class="project-count">({{ status_group.items.size }})</span>
+          </h2>
+          
+          <div class="projects-grid">
+            {% for project in status_group.items %}
+              <article class="project-card status-{{ project.status | downcase }}">
+                <header class="project-card-header">
+                  <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                  <div class="project-meta">
+                    {% if project.start_date %}
+                      <span class="project-dates">
+                        {{ project.start_date | date: "%b %Y" }}
+                        {% if project.end_date %} - {{ project.end_date | date: "%b %Y" }}{% else %} - Present{% endif %}
+                      </span>
+                    {% endif %}
+                    <span class="project-status status-{{ project.status | downcase }}">{{ project.status }}</span>
+                  </div>
+                </header>
+                
+                {% if project.description %}
+                  <p class="project-excerpt">{{ project.description | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+                
+                {% if project.technologies.size > 0 %}
+                  <div class="project-technologies">
+                    {% for tech in project.technologies limit: 5 %}
+                      <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                    {% if project.technologies.size > 5 %}
+                      <span class="tech-tag">+{{ project.technologies.size | minus: 5 }} more</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                
+                <div class="project-links">
+                  {% if project.github_repo %}
+                    <a href="{{ project.github_repo }}" class="project-link" target="_blank">
+                      📁 Repository
+                    </a>
+                  {% endif %}
+                  {% if project.demo_url %}
+                    <a href="{{ project.demo_url }}" class="project-link" target="_blank">
+                      🚀 Demo
+                    </a>
+                  {% endif %}
+                  {% if project.paper_url %}
+                    <a href="{{ project.paper_url }}" class="project-link" target="_blank">
+                      📄 Paper
+                    </a>
+                  {% endif %}
+                  <a href="{{ project.url | relative_url }}" class="project-link project-view">
+                    📖 Read More
+                  </a>
+                </div>
+                
+                {% if project.featured %}
+                  <div class="featured-badge">⭐ Featured</div>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <div class="empty-state">
+      <h3>No projects available yet</h3>
+      <p>
+        Project showcases will appear here as they are documented and published. 
+        These will include detailed breakdowns of technical implementations, 
+        challenges overcome, and insights gained.
+      </p>
+      <div class="getting-started">
+        <h4>To add projects:</h4>
+        <ol>
+          <li>Create markdown files in the <code>_projects</code> directory</li>
+          <li>Include front matter with project metadata (title, status, technologies, etc.)</li>
+          <li>Write detailed project descriptions with technical insights</li>
+          <li>Link to related journal entries and notebooks</li>
+        </ol>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+.projects-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.page-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.projects-status-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.status-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.project-count {
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid var(--border-color);
+  position: relative;
+}
+
+.project-card.status-active {
+  border-left-color: var(--success-color);
+}
+
+.project-card.status-completed {
+  border-left-color: var(--primary-color);
+}
+
+.project-card.status-planning {
+  border-left-color: var(--warning-color);
+}
+
+.project-card.status-archived {
+  border-left-color: var(--text-muted);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card-header h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-card-header h3 a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.project-card-header h3 a:hover {
+  color: var(--primary-color);
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.project-excerpt {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.project-link {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) / 2);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+  border-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-view {
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+  border-color: var(--primary-color);
+}
+
+.project-view:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.featured-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: var(--warning-color);
+  color: var(--text-inverse);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: calc(var(--border-radius) / 2);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+}
+
+.getting-started {
+  margin-top: var(--spacing-xl);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-code);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.getting-started h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.getting-started ol {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.getting-started li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .project-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+}
+</style>

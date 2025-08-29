@@ -1,0 +1,27 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+          {{ site.title | escape }}
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="{{ "/" | relative_url }}" {% if page.url == "/" %}class="current"{% endif %}>Home</a></li>
+          <li><a href="/journal/" {% if page.url contains "/journal/" or page.layout == "post" %}class="current"{% endif %}>Journal</a></li>
+          <li><a href="/notebooks/" {% if page.url contains "/notebooks/" or page.layout == "notebook" %}class="current"{% endif %}>Notebooks</a></li>
+          <li><a href="/projects/" {% if page.url contains "/projects/" or page.layout == "project" %}class="current"{% endif %}>Projects</a></li>
+          <li><a href="/about/" {% if page.url == "/about/" %}class="current"{% endif %}>About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

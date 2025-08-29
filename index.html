@@ -1,16 +1,94 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <link rel="canonical" href="https://your-firebase-site.web.app/">
-    <meta http-equiv="refresh" content="0; url=https://your-firebase-site.web.app/">
-    <script>
-        // Fallback for browsers that don't support meta refresh
-        window.location.replace("https://rapidtechconsultants.com/");
-    </script>
-</head>
-<body>
-    <p>You are being redirected to <a href="https://rapidtechconsultants.com/">RTS //_ Technology & Solutions</a>.</p>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <div class="hero-section">
+    <h1 class="hero-title">Pat Snyder</h1>
+    <h2 class="hero-subtitle">Project Portfolio & Technical Journal</h2>
+    <p class="hero-description">
+      A living portfolio documenting data science projects, chess engine development, 
+      and technical explorations. This site serves as both a showcase of completed work 
+      and a real-time journal of ongoing experiments and learning.
+    </p>
+    
+    <div class="quick-links">
+      <a href="/journal/" class="btn btn-primary">Latest Journal Entries</a>
+      <a href="/projects/" class="btn btn-secondary">Featured Projects</a>
+      <a href="https://rapidtechconsultants.com/" class="btn btn-tertiary" target="_blank">Main Website</a>
+    </div>
+  </div>
+
+  <section class="recent-content">
+    <div class="content-grid">
+      <div class="recent-posts">
+        <h3>Recent Journal Entries</h3>
+        {% assign recent_posts = site.posts | slice: 0, 3 %}
+        {% if recent_posts.size > 0 %}
+          {% for post in recent_posts %}
+            <article class="post-preview">
+              <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+              <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+              <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p>Journal entries coming soon...</p>
+        {% endif %}
+      </div>
+
+      <div class="recent-notebooks">
+        <h3>Recent Notebook Analysis</h3>
+        {% assign recent_notebooks = site.notebooks | slice: 0, 3 %}
+        {% if recent_notebooks.size > 0 %}
+          {% for notebook in recent_notebooks %}
+            <article class="notebook-preview">
+              <h4><a href="{{ notebook.url | relative_url }}">{{ notebook.title }}</a></h4>
+              <time class="post-date">{{ notebook.date | date: "%B %d, %Y" }}</time>
+              <p>{{ notebook.description | default: notebook.excerpt | strip_html | truncatewords: 25 }}</p>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p>Notebook analyses coming soon...</p>
+        {% endif %}
+      </div>
+
+      <div class="featured-projects">
+        <h3>Featured Projects</h3>
+        {% assign featured_projects = site.projects | where: "featured", true | slice: 0, 3 %}
+        {% if featured_projects.size > 0 %}
+          {% for project in featured_projects %}
+            <article class="project-preview">
+              <h4><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h4>
+              <p>{{ project.description | strip_html | truncatewords: 25 }}</p>
+              {% if project.technologies %}
+                <div class="tech-tags">
+                  {% for tech in project.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        {% else %}
+          <p>Featured projects coming soon...</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="about-preview">
+    <h3>About This Portfolio</h3>
+    <p>
+      This site represents a unique approach to technical documentation and project showcasing. 
+      Rather than static project descriptions, you'll find living documents that capture both 
+      the technical implementation details and the thought processes behind each project.
+    </p>
+    <p>
+      Each entry combines narrative context (the "why") with data analysis and code (the "what" and "how"), 
+      providing a complete picture of the problem-solving process. Projects range from chess engine 
+      development to data science explorations, all documented with the same level of analytical rigor.
+    </p>
+  </section>
+</div>

@@ -1,0 +1,164 @@
+---
+layout: default
+title: Journal
+permalink: /journal/
+---
+
+<div class="journal-archive">
+  <header class="page-header">
+    <h1>Technical Journal</h1>
+    <p class="page-description">
+      A chronological record of project development, technical explorations, and analytical insights. 
+      Each entry captures both the narrative context and the technical implementation details.
+    </p>
+  </header>
+
+  {% assign posts_by_year = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+  
+  {% if posts_by_year.size > 0 %}
+    {% for year_group in posts_by_year %}
+      <section class="year-section">
+        <h2 class="year-heading">{{ year_group.name }}</h2>
+        
+        <div class="posts-grid">
+          {% for post in year_group.items %}
+            <article class="post-card">
+              <header class="post-card-header">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+              </header>
+              
+              {% if post.description %}
+                <p class="post-excerpt">{{ post.description }}</p>
+              {% else %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+              {% endif %}
+              
+              {% if post.categories.size > 0 %}
+                <div class="post-categories">
+                  {% for category in post.categories %}
+                    <span class="category">{{ category }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              
+              {% if post.tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in post.tags limit: 3 %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                  {% if post.tags.size > 3 %}
+                    <span class="tag">+{{ post.tags.size | minus: 3 }} more</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  {% else %}
+    <div class="empty-state">
+      <h3>No journal entries yet</h3>
+      <p>Journal entries will appear here as they are published. Check back soon for insights and project updates!</p>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+.journal-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.page-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.year-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.year-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.post-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.post-card-header h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-card-header h3 a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.post-card-header h3 a:hover {
+  color: var(--primary-color);
+}
+
+.post-excerpt {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.post-categories,
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .post-card {
+    padding: var(--spacing-lg);
+  }
+}
+</style>

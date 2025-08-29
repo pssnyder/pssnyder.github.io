@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<article class="project">
+  <header class="project-header">
+    <h1 class="project-title">{{ page.title | escape }}</h1>
+    <div class="project-meta">
+      {%- if page.start_date -%}
+        <span class="project-dates">
+          {{ page.start_date | date: "%B %Y" }}
+          {%- if page.end_date -%} - {{ page.end_date | date: "%B %Y" }}{%- else -%} - Present{%- endif -%}
+        </span>
+      {%- endif -%}
+      {%- if page.status -%}
+        • <span class="project-status status-{{ page.status | downcase }}">{{ page.status }}</span>
+      {%- endif -%}
+    </div>
+    
+    {%- if page.description -%}
+      <div class="project-description">
+        {{ page.description }}
+      </div>
+    {%- endif -%}
+    
+    <div class="project-links">
+      {%- if page.github_repo -%}
+        <a href="{{ page.github_repo }}" class="github-link" target="_blank">
+          📁 GitHub Repository
+        </a>
+      {%- endif -%}
+      {%- if page.demo_url -%}
+        <a href="{{ page.demo_url }}" class="demo-link" target="_blank">
+          🚀 Live Demo
+        </a>
+      {%- endif -%}
+      {%- if page.paper_url -%}
+        <a href="{{ page.paper_url }}" class="paper-link" target="_blank">
+          📄 Research Paper
+        </a>
+      {%- endif -%}
+    </div>
+  </header>
+
+  {%- if page.technologies.size > 0 -%}
+    <div class="project-technologies">
+      <strong>Technologies:</strong>
+      {%- for tech in page.technologies -%}
+        <span class="tech-tag">{{ tech }}</span>{% unless forloop.last %}, {% endunless %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {%- if page.related_posts.size > 0 -%}
+    <div class="related-content">
+      <h3>Related Journal Entries</h3>
+      <ul class="related-posts">
+        {%- for post_url in page.related_posts -%}
+          {%- assign related_post = site.posts | where: "url", post_url | first -%}
+          {%- if related_post -%}
+            <li>
+              <a href="{{ related_post.url | relative_url }}">{{ related_post.title }}</a>
+              <time>{{ related_post.date | date: "%B %d, %Y" }}</time>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  <nav class="project-navigation">
+    {%- assign projects = site.projects | sort: 'start_date' | reverse -%}
+    {%- for project in projects -%}
+      {%- if project.url == page.url -%}
+        {%- assign current_index = forloop.index0 -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    
+    {%- if current_index > 0 -%}
+      {%- assign prev_project = projects[current_index-1] -%}
+      <a class="prev" href="{{ prev_project.url | relative_url }}">&larr; {{ prev_project.title }}</a>
+    {%- endif -%}
+    
+    {%- assign next_index = current_index | plus: 1 -%}
+    {%- if next_index < projects.size -%}
+      {%- assign next_project = projects[next_index] -%}
+      <a class="next" href="{{ next_project.url | relative_url }}">{{ next_project.title }} &rarr;</a>
+    {%- endif -%}
+  </nav>
+</article>

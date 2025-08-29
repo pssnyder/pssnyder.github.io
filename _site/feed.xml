@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-29T18:13:27-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pat Snyder - Project Portfolio &amp;amp; Journal</title><subtitle>A living portfolio documenting data science projects, chess engine development, and technical explorations</subtitle><entry><title type="html">Welcome to the Technical Portfolio</title><link href="http://localhost:4000/meta/portfolio/2025/08/29/welcome-to-technical-portfolio.html" rel="alternate" type="text/html" title="Welcome to the Technical Portfolio" /><published>2025-08-29T00:00:00-04:00</published><updated>2025-08-29T00:00:00-04:00</updated><id>http://localhost:4000/meta/portfolio/2025/08/29/welcome-to-technical-portfolio</id><content type="html" xml:base="http://localhost:4000/meta/portfolio/2025/08/29/welcome-to-technical-portfolio.html"><![CDATA[<h1 id="welcome-to-my-technical-portfolio">Welcome to My Technical Portfolio</h1>
+
+<p>This inaugural post marks the launch of a new approach to technical documentation and project showcasing. Rather than maintaining separate, disconnected project repositories, this portfolio brings together all my technical work under one cohesive narrative.</p>
+
+<h2 id="the-vision">The Vision</h2>
+
+<p>The goal of this site is to create a <strong>living portfolio</strong> that captures not just the final outputs of technical projects, but the entire journey of problem-solving, analysis, and continuous learning. Each entry will combine three essential elements:</p>
+
+<ol>
+  <li><strong>Strategic Context</strong> - The “why” behind each technical decision</li>
+  <li><strong>Analytical Process</strong> - The “how” of approaching and solving problems</li>
+  <li><strong>Technical Implementation</strong> - The “what” of actual code and systems</li>
+</ol>
+
+<h2 id="what-makes-this-different">What Makes This Different</h2>
+
+<p>Traditional technical portfolios often fall into two extremes: either high-level summaries that lack technical depth, or code repositories with minimal context about the business value and decision-making process. This portfolio bridges that gap by treating each project as a case study in applied problem-solving.</p>
+
+<h3 id="the-journal-approach">The Journal Approach</h3>
+
+<p>Instead of static project descriptions, this site maintains a <strong>technical journal</strong> where each entry documents:</p>
+
+<ul>
+  <li>Real-time progress on ongoing projects</li>
+  <li>Detailed analysis of technical challenges and solutions</li>
+  <li>Retrospective insights on completed work</li>
+  <li>Connections between different projects and learning areas</li>
+</ul>
+
+<h3 id="interactive-analysis">Interactive Analysis</h3>
+
+<p>Many entries will include <strong>Jupyter notebooks</strong> that combine code, visualizations, and narrative analysis. These notebooks are automatically converted to web-friendly formats while preserving the interactive nature of the analysis.</p>
+
+<h2 id="current-focus-areas">Current Focus Areas</h2>
+
+<p>My technical explorations currently center around several key areas:</p>
+
+<h3 id="chess-engine-development">Chess Engine Development</h3>
+
+<p>Building and optimizing chess engines serves as an excellent vehicle for exploring:</p>
+<ul>
+  <li>Algorithm optimization and performance tuning</li>
+  <li>Competitive programming techniques</li>
+  <li>Systematic benchmarking and analysis</li>
+  <li>The intersection of theoretical computer science and practical implementation</li>
+</ul>
+
+<h3 id="data-science-applications">Data Science Applications</h3>
+
+<p>Applying statistical analysis and machine learning to real-world problems, with emphasis on:</p>
+<ul>
+  <li>Interpretable models and actionable insights</li>
+  <li>Bridging technical capability with business value</li>
+  <li>Reproducible analysis workflows</li>
+  <li>Data visualization and storytelling</li>
+</ul>
+
+<h3 id="development-tooling">Development Tooling</h3>
+
+<p>Creating tools and workflows that enhance productivity:</p>
+<ul>
+  <li>Automation scripts for common development tasks</li>
+  <li>Documentation generation and maintenance</li>
+  <li>Development environment optimization</li>
+  <li>Code quality and testing frameworks</li>
+</ul>
+
+<h2 id="the-technical-stack">The Technical Stack</h2>
+
+<p>This site is built using a carefully chosen set of technologies that work together seamlessly:</p>
+
+<ul>
+  <li><strong>Jekyll</strong> for static site generation with dynamic content capabilities</li>
+  <li><strong>GitHub Pages</strong> for hosting and automatic deployment</li>
+  <li><strong>Custom notebook conversion</strong> pipeline for Jupyter notebook integration</li>
+  <li><strong>Responsive design</strong> optimized for both technical and non-technical audiences</li>
+</ul>
+
+<p>The entire system is designed to minimize friction between doing technical work and documenting it, making it easy to maintain comprehensive project documentation.</p>
+
+<h2 id="whats-coming-next">What’s Coming Next</h2>
+
+<p>In the immediate future, you can expect to see:</p>
+
+<ol>
+  <li><strong>Chess Engine Analysis</strong> - Detailed breakdown of engine evaluation functions and search algorithms</li>
+  <li><strong>Data Analysis Notebooks</strong> - Interactive explorations of various datasets and analytical techniques</li>
+  <li><strong>Project Retrospectives</strong> - Comprehensive reviews of completed projects with lessons learned</li>
+  <li><strong>Tool Documentation</strong> - Scripts and utilities I’ve developed for various technical tasks</li>
+</ol>
+
+<p>Each piece of content will include not just the technical details, but the strategic thinking and analytical process that led to the final implementation.</p>
+
+<h2 id="connect-and-collaborate">Connect and Collaborate</h2>
+
+<p>This portfolio serves as both a personal knowledge base and a platform for sharing insights with the broader technical community. I’m always interested in discussing technical challenges, strategic approaches, and potential collaborations.</p>
+
+<p>Whether you’re here to explore specific technical implementations, understand the thought process behind various projects, or discuss potential collaborations, welcome to this journey of continuous learning and systematic problem-solving.</p>
+
+<hr />
+
+<p><em>This post serves as both an introduction and a commitment to maintaining this technical journal as a living document of ongoing learning and project development.</em></p>]]></content><author><name>Pat Snyder</name></author><category term="meta" /><category term="portfolio" /><category term="jekyll" /><category term="github-pages" /><category term="documentation" /><category term="portfolio" /><summary type="html"><![CDATA[Introduction to this technical portfolio and journal, explaining the philosophy and approach to documenting projects and insights.]]></summary></entry></feed>

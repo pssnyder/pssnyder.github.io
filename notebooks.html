@@ -1,0 +1,261 @@
+---
+layout: default
+title: Notebooks
+permalink: /notebooks/
+---
+
+<div class="notebooks-archive">
+  <header class="page-header">
+    <h1>Data Analysis Notebooks</h1>
+    <p class="page-description">
+      Interactive Jupyter notebooks showcasing data analysis, machine learning experiments, 
+      and technical explorations. Each notebook combines code, visualizations, and narrative analysis.
+    </p>
+  </header>
+
+  {% if site.notebooks.size > 0 %}
+    {% assign notebooks_by_type = site.notebooks | group_by: 'notebook_type' %}
+    
+    {% for type_group in notebooks_by_type %}
+      <section class="notebook-type-section">
+        <h2 class="type-heading">{{ type_group.name | default: "General Analysis" }}</h2>
+        
+        <div class="notebooks-grid">
+          {% assign sorted_notebooks = type_group.items | sort: 'date' | reverse %}
+          {% for notebook in sorted_notebooks %}
+            <article class="notebook-card">
+              <header class="notebook-card-header">
+                <h3><a href="{{ notebook.url | relative_url }}">{{ notebook.title }}</a></h3>
+                <time class="notebook-date">{{ notebook.date | date: "%B %d, %Y" }}</time>
+              </header>
+              
+              {% if notebook.description %}
+                <p class="notebook-excerpt">{{ notebook.description }}</p>
+              {% else %}
+                <p class="notebook-excerpt">{{ notebook.excerpt | strip_html | truncatewords: 25 }}</p>
+              {% endif %}
+              
+              {% if notebook.technologies.size > 0 %}
+                <div class="notebook-technologies">
+                  <strong>Technologies:</strong>
+                  {% for tech in notebook.technologies limit: 4 %}
+                    <span class="tech-tag">{{ tech }}</span>
+                  {% endfor %}
+                  {% if notebook.technologies.size > 4 %}
+                    <span class="tech-tag">+{{ notebook.technologies.size | minus: 4 }} more</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+              
+              <div class="notebook-links">
+                {% if notebook.github_repo %}
+                  <a href="{{ notebook.github_repo }}" class="notebook-link" target="_blank">
+                    📁 Repository
+                  </a>
+                {% endif %}
+                {% if notebook.notebook_file %}
+                  <a href="{{ notebook.notebook_file }}" class="notebook-link" target="_blank">
+                    📓 Download
+                  </a>
+                {% endif %}
+                <a href="{{ notebook.url | relative_url }}" class="notebook-link notebook-view">
+                  👁️ View Analysis
+                </a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  {% else %}
+    <div class="empty-state">
+      <h3>No notebooks available yet</h3>
+      <p>
+        Data analysis notebooks will appear here as they are converted and published. 
+        These will include Jupyter notebooks covering various topics from chess engine analysis 
+        to data science experiments.
+      </p>
+      <div class="getting-started">
+        <h4>To add notebooks:</h4>
+        <ol>
+          <li>Place your .ipynb files in the <code>_notebooks</code> directory</li>
+          <li>Run <code>python scripts/convert_notebooks.py</code> to convert them</li>
+          <li>The converted markdown files will appear in <code>_posts</code></li>
+        </ol>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+.notebooks-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.page-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.notebook-type-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.type-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.notebooks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.notebook-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid var(--accent-color);
+}
+
+.notebook-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.notebook-card-header h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.notebook-card-header h3 a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.notebook-card-header h3 a:hover {
+  color: var(--accent-color);
+}
+
+.notebook-date {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.notebook-excerpt {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.notebook-technologies {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.notebook-technologies strong {
+  color: var(--text-primary);
+  margin-right: var(--spacing-sm);
+}
+
+.notebook-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.notebook-link {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) / 2);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  transition: all 0.2s ease;
+}
+
+.notebook-link:hover {
+  background-color: var(--accent-color);
+  color: var(--text-inverse);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.notebook-view {
+  background-color: var(--accent-color);
+  color: var(--text-inverse);
+  border-color: var(--accent-color);
+}
+
+.notebook-view:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+}
+
+.getting-started {
+  margin-top: var(--spacing-xl);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-code);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.getting-started h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.getting-started ol {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.getting-started li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .notebooks-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .notebook-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .notebook-links {
+    flex-direction: column;
+  }
+}
+</style>
