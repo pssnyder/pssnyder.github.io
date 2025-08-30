@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive. | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in slowmate: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and...">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive. | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive." />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in slowmate: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive." />
+<meta property="og:description" content="Development milestone in slowmate: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive." />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-09T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-09T20:00:00-04:00","datePublished":"2025-08-09T20:00:00-04:00","description":"Development milestone in slowmate: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive.","headline":"SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive.</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-09T20:00:00-04:00">
+        August 09, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="slowmate-slowmate-v10-release---functional-10-version-now-available-for-tournament-play---added-multiple-test-result-images-and-pgn-files-for-evaluation-scale-verification-depth-progression-tests-uci-options-verification-and-time-management-revisions---included-tournament-results-for-all-slowmate-versions---removed-outdated-hellopy-script-from-the-archive">SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive.</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/slowmate">slowmate</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/slowmate/commit/12ba2cdc7022a58903d7d1acc67925b0446e9105"><code class="language-plaintext highlighter-rouge">12ba2cdc</code></a>
+<strong>Date:</strong> 2025-08-10</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive.</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .gitignore                                         |     3 +-
+ README.md                                          |    26 +-
+ SlowMate_v1.0_Tournament/README.md                 |   220 +
+ SlowMate_v1.0_Tournament/TOURNAMENT_README.txt     |    35 +
+ .../first_tournament_victory.pgn                   |    27 +
+ docs/plans/1_0_0_rebuild_strategy.md               |   223 +
+ requirements.txt                                   |    14 +-
+ results/Engine Battle 20250809.pgn                 | 11761 +++++++++++++++++++
+ results/engine_test_report.json                    |  1752 +++
+ results/engine_test_report.md                      |   565 +
+ results/tournament_analysis.json                   | 10484 +++++++++++++++++
+ results/tournament_analysis.md                     |   264 +
+ slowmate.bat                                       |     6 -
+ slowmate/__init__.py                               |     8 -
+ slowmate/__pycache__/__init__.cpython-313.pyc      |   Bin 376 -&gt; 0 bytes
+ slowmate/__pycache__/engine.cpython-313.pyc        |   Bin 9512 -&gt; 3496 bytes
+ slowmate/advanced_search.py                        |   460 -
+ slowmate/core/__init__.py                          |     9 +
+ slowmate/core/board.py                             |   111 +
+ slowmate/core/evaluate.py                          |   271 +
+ slowmate/core/moves.py                             |   144 +
+ slowmate/depth_search.py                           |   971 --
+ slowmate/engine.py                                 |   339 +-
+ slowmate/game_rules.py                             |   208 -
+ slowmate/intelligence.py                           |    51 -
+ slowmate/knowledge/__init__.py                     |    29 -
+ slowmate/knowledge/endgame_patterns.json           |   101 -
+ slowmate/knowledge/endgame_patterns.py             |   395 -
+ slowmate/knowledge/endgame_tactics.py              |    97 -
+ slowmate/knowledge/enhanced_endgame_evaluator.py   |   476 -
+ slowmate/knowledge/knowledge_base.py               |   147 -
+ slowmate/knowledge/middlegame_tactics.py           |   296 -
+ slowmate/knowledge/opening_book.py                 |   286 -
+ slowmate/knowledge/opening_weights.py              |   378 -
+ slowmate/negascout_search.py                       |   644 -
+ slowmate/search/__init__.py                        |   255 -
+ slowmate/search/counter_moves.py                   |   364 -
+ slowmate/search/enhanced.py                        |   177 +
+ slowmate/search/enhanced_see.py                    |   250 -
+ slowmate/search/futility_pruning.py                |   431 -
+ slowmate/search/history_heuristic.py               |   314 -
+ slowmate/search/integration.py                     |   330 -
+ slowmate/search/killer_moves.py                    |   288 -
+ slowmate/search/late_move_reduction.py             |   363 -
+ slowmate/search/move_ordering.py                   |   427 -
+ slowmate/search/mvv_lva.py                         |   165 -
+ slowmate/search/null_move_pruning.py               |   390 -
+ slowmate/search/transposition_table.py             |   356 -
+ slowmate/search/zobrist.py                         |   239 -
+ slowmate/search_engine.py                          |   273 -
+ slowmate/search_intelligence.py                    |   281 -
+ slowmate/slowmate_uci.py                           |    16 -
+ slowmate/time_management/__init__.py               |   250 -
+ slowmate/time_management/aspiration_windows.py     |   493 -
+ slowmate/time_management/dynamic_allocation.py     |   811 --
+ slowmate/time_management/emergency_mode.py         |   654 --
+ slowmate/time_management/iterative_deepening.py    |   443 -
+ slowmate/time_management/move_overhead.py          |   582 -
+ slowmate/time_management/search_controller.py      |   494 -
+ .../search_controller.py.backup_v0302              |   478 -
+ slowmate/time_management/search_extensions.py      |   583 -
+ slowmate/time_management/search_timeout.py         |   401 -
+ slowmate/time_management/time_allocation.py        |   444 -
+ slowmate/time_management/time_control.py           |   319 -
+ slowmate/time_management/time_tracking.py          |   458 -
+ slowmate/time_manager.py                           |   255 -
+ slowmate/uci.py                                    |   622 -
+ slowmate/uci/protocol.py                           |   129 +
+ slowmate/uci_enhanced.py                           |   535 +-
+ slowmate/uci_original.py                           |   357 -
+ slowmate_uci.py                                    |    31 +
+ slowmate_v1.0_RELEASE.spec                         |    38 +
+ testing/core_tests/test_board.py                   |    81 +
+ testing/core_tests/test_evaluate.py                |    68 +
+ testing/core_tests/test_moves.py                   |    88 +
+ testing/integration_tests/test_uci.py              |    96 +
+ testing/run_tests.py                               |    36 +
+ testing/test_engine_search_basic.py                |    31 +
+ testing/test_evaluation_hierarchy.py               |   138 +
+ testing/v0_1_01_archive/hello.py                   |     1 -
+ 176 files changed, 27049 insertions(+), 17587 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.gitignore</code></li>
+  <li><code class="language-plaintext highlighter-rouge">README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SlowMate_v1.0_Tournament/README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SlowMate_v1.0_Tournament/TOURNAMENT_README.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SlowMate_v1.0_Tournament/first_tournament_victory.pgn</code></li>
+  <li><code class="language-plaintext highlighter-rouge">docs/plans/1_0_0_rebuild_strategy.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">requirements.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">results/Engine Battle 20250809.pgn</code></li>
+  <li><code class="language-plaintext highlighter-rouge">results/engine_test_report.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">results/engine_test_report.md</code></li>
+  <li>… and 166 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the slowmate chess engine. The modifications enhance the position evaluation system, affecting how the engine assesses chess positions.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the slowmate repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">slowmate</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html">&larr; ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing</a><a class="next" href="/chess-engine/development/2025/08/10/engine-tester-summary-of-what-weve-accomplished-ive-successfully-created-a-compr.html">ENGINE-TESTER: 🎉 Summary of What We've Accomplished I've successfully created a comprehensive analysis system that processes all your tournament data and reveals some absolutely incredible achievements! Here's what we've built: &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

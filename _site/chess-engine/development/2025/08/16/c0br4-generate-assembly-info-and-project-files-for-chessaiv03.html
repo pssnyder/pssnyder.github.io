@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>C0BR4: Generate assembly info and project files for ChessAI_v0.3 | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in c0br4: Generate assembly info and project files for ChessAI_v0.3">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/16/c0br4-generate-assembly-info-and-project-files-for-chessaiv03.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>C0BR4: Generate assembly info and project files for ChessAI_v0.3 | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="C0BR4: Generate assembly info and project files for ChessAI_v0.3" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in c0br4: Generate assembly info and project files for ChessAI_v0.3" />
+<meta property="og:description" content="Development milestone in c0br4: Generate assembly info and project files for ChessAI_v0.3" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/16/c0br4-generate-assembly-info-and-project-files-for-chessaiv03.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/16/c0br4-generate-assembly-info-and-project-files-for-chessaiv03.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-16T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="C0BR4: Generate assembly info and project files for ChessAI_v0.3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-16T20:00:00-04:00","datePublished":"2025-08-16T20:00:00-04:00","description":"Development milestone in c0br4: Generate assembly info and project files for ChessAI_v0.3","headline":"C0BR4: Generate assembly info and project files for ChessAI_v0.3","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/16/c0br4-generate-assembly-info-and-project-files-for-chessaiv03.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/16/c0br4-generate-assembly-info-and-project-files-for-chessaiv03.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">C0BR4: Generate assembly info and project files for ChessAI_v0.3</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-16T20:00:00-04:00">
+        August 16, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="c0br4-generate-assembly-info-and-project-files-for-chessai_v03">C0BR4: Generate assembly info and project files for ChessAI_v0.3</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/c0br4">c0br4</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/c0br4/commit/a3bdb0486bd53f89ad6e67889b6f402e8d02751a"><code class="language-plaintext highlighter-rouge">a3bdb048</code></a>
+<strong>Date:</strong> 2025-08-17</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Generate assembly info and project files for ChessAI_v0.3</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> CHECKLIST.md                                       |  38 +-
+ README.md                                          |  40 +-
+ backups/dist_backup_20250817_172447/README.md      |  59 +++
+ .../v0.0/ChessEngine.deps.json                     |  23 +
+ .../v0.0/ChessEngine.runtimeconfig.json            |  12 +
+ .../v0.1/ChessEngine.deps.json                     |  23 +
+ .../v0.1/ChessEngine.runtimeconfig.json            |  12 +
+ .../v0.2/ChessEngine.deps.json                     |  23 +
+ .../v0.2/ChessEngine.runtimeconfig.json            |  12 +
+ .../v0.3/ChessAI_v0.3.deps.json                    |  23 +
+ .../v0.3/ChessAI_v0.3.runtimeconfig.json           |  12 +
+ backups/dist_backup_20250817_172447/v0.3/VERSION   |   1 +
+ .../src_backup_20250817_172446/ChessEngine.csproj  |  31 ++
+ .../ChessEngine/Core/Board.cs                      | 357 +++++++++++++++
+ .../ChessEngine/Core/BoardHelper.cs                |  25 ++
+ .../ChessEngine/Core/Move.cs                       | 127 ++++++
+ .../ChessEngine/Core/MoveGenerator.cs              | 479 +++++++++++++++++++++
+ .../ChessEngine/Core/Piece.cs                      |  54 +++
+ .../ChessEngine/Core/PieceType.cs                  |  13 +
+ .../ChessEngine/Core/Square.cs                     |  64 +++
+ .../ChessEngine/Evaluation/SimpleEvaluator.cs      | 247 +++++++++++
+ .../ChessEngine/Search/AlphaBetaSearchBot.cs       | 129 ++++++
+ .../ChessEngine/Search/IChessBot.cs                |   9 +
+ .../ChessEngine/Search/RandomBot.cs                |  21 +
+ .../ChessEngine/Search/SimpleSearchBot.cs          | 119 +++++
+ .../ChessEngine/Testing/PerformanceBenchmark.cs    | 124 ++++++
+ .../ChessEngine/UCI/UCIEngine.cs                   | 329 ++++++++++++++
+ backups/src_backup_20250817_172446/Program.cs      |  16 +
+ backups/src_backup_20250817_172446/VERSION         |   1 +
+ .../bin/Debug/net6.0/ChessAI_v0.3.deps.json        |  23 +
+ .../bin/Debug/net6.0/ChessAI_v0.3.pdb              | Bin 0 -&gt; 26068 bytes
+ .../Debug/net6.0/ChessAI_v0.3.runtimeconfig.json   |   9 +
+ .../bin/Debug/net6.0/VERSION                       |   1 +
+ .../bin/Release/net6.0/ChessAI_v0.3.deps.json      |  23 +
+ .../Release/net6.0/ChessAI_v0.3.runtimeconfig.json |  12 +
+ .../bin/Release/net6.0/VERSION                     |   1 +
+ .../obj/ChessEngine.csproj.nuget.dgspec.json       |  84 ++++
+ .../obj/ChessEngine.csproj.nuget.g.props           |  15 +
+ .../obj/ChessEngine.csproj.nuget.g.targets         |   2 +
+ .../.NETCoreApp,Version=v6.0.AssemblyAttributes.cs |   4 +
+ .../obj/Debug/net6.0/ChessAI_v0.3.pdb              | Bin 0 -&gt; 26068 bytes
+ .../obj/Debug/net6.0/ChessEngine.AssemblyInfo.cs   |  22 +
+ .../net6.0/ChessEngine.AssemblyInfoInputs.cache    |   1 +
+ ...ngine.GeneratedMSBuildEditorConfig.editorconfig |  13 +
+ .../obj/Debug/net6.0/ChessEngine.GlobalUsings.g.cs |   8 +
+ .../obj/Debug/net6.0/ChessEngine.assets.cache      | Bin 0 -&gt; 152 bytes
+ .../ChessEngine.csproj.CoreCompileInputs.cache     |   1 +
+ .../net6.0/ChessEngine.csproj.FileListAbsolute.txt |  16 +
+ .../net6.0/ChessEngine.genruntimeconfig.cache      |   1 +
+ .../obj/Debug/net6.0/ChessEngine.sourcelink.json   |   1 +
+ .../.NETCoreApp,Version=v6.0.AssemblyAttributes.cs |   4 +
+ .../obj/Release/net6.0/ChessEngine.AssemblyInfo.cs |  22 +
+ .../net6.0/ChessEngine.AssemblyInfoInputs.cache    |   1 +
+ ...ngine.GeneratedMSBuildEditorConfig.editorconfig |  13 +
+ .../Release/net6.0/ChessEngine.GlobalUsings.g.cs   |   8 +
+ .../obj/Release/net6.0/ChessEngine.assets.cache    | Bin 0 -&gt; 152 bytes
+ .../ChessEngine.csproj.CoreCompileInputs.cache     |   1 +
+ .../net6.0/ChessEngine.csproj.FileListAbsolute.txt |  13 +
+ .../net6.0/ChessEngine.genruntimeconfig.cache      |   1 +
+ .../Release/net6.0/PublishOutputs.0744f8c7a5.txt   |   5 +
+ .../Release/net6.0/PublishOutputs.5bfbc98c5c.txt   |   4 +
+ .../Release/net6.0/PublishOutputs.8968d62112.txt   |   4 +
+ .../Release/net6.0/PublishOutputs.bcb599e8c3.txt   |   4 +
+ .../obj/project.assets.json                        |  89 ++++
+ .../obj/project.nuget.cache                        |  13 +
+ chess-challenge-source                             |   1 +
+ opponent-bots                                      |   1 +
+ src/ChessEngine.csproj                             |  27 ++
+ src/ChessEngine/Core/Board.cs                      | 357 +++++++++++++++
+ src/ChessEngine/Core/BoardHelper.cs                |  25 ++
+ src/ChessEngine/Core/Move.cs                       | 127 ++++++
+ src/ChessEngine/Core/MoveGenerator.cs              | 479 +++++++++++++++++++++
+ src/ChessEngine/Core/Piece.cs                      |  54 +++
+ src/ChessEngine/Core/PieceType.cs                  |  13 +
+ src/ChessEngine/Core/Square.cs                     |  64 +++
+ src/ChessEngine/Evaluation/SimpleEvaluator.cs      | 247 +++++++++++
+ src/ChessEngine/Search/AlphaBetaSearchBot.cs       | 129 ++++++
+ src/ChessEngine/Search/IChessBot.cs                |   9 +
+ src/ChessEngine/Search/RandomBot.cs                |  21 +
+ src/ChessEngine/Search/SimpleSearchBot.cs          | 119 +++++
+ src/ChessEngine/Testing/PerformanceBenchmark.cs    | 124 ++++++
+ src/ChessEngine/UCI/UCIEngine.cs                   | 329 ++++++++++++++
+ src/Program.cs                                     |  16 +
+ src/VERSION                                        |   1 +
+ src/bin/Debug/net6.0/ChessAI_v0.3.deps.json        |  23 +
+ src/bin/Debug/net6.0/ChessAI_v0.3.pdb              | Bin 0 -&gt; 26068 bytes
+ .../Debug/net6.0/ChessAI_v0.3.runtimeconfig.json   |   9 +
+ src/bin/Debug/net6.0/VERSION                       |   1 +
+ src/bin/Release/net6.0/ChessAI_v0.3.deps.json      |  23 +
+ .../Release/net6.0/ChessAI_v0.3.runtimeconfig.json |  12 +
+ src/bin/Release/net6.0/VERSION                     |   1 +
+ src/obj/ChessEngine.csproj.nuget.dgspec.json       |  84 ++++
+ src/obj/ChessEngine.csproj.nuget.g.props           |  15 +
+ src/obj/ChessEngine.csproj.nuget.g.targets         |   2 +
+ .../.NETCoreApp,Version=v6.0.AssemblyAttributes.cs |   4 +
+ src/obj/Debug/net6.0/ChessAI_v0.3.pdb              | Bin 0 -&gt; 26068 bytes
+ src/obj/Debug/net6.0/ChessEngine.AssemblyInfo.cs   |  22 +
+ .../net6.0/ChessEngine.AssemblyInfoInputs.cache    |   1 +
+ ...ngine.GeneratedMSBuildEditorConfig.editorconfig |  13 +
+ src/obj/Debug/net6.0/ChessEngine.GlobalUsings.g.cs |   8 +
+ src/obj/Debug/net6.0/ChessEngine.assets.cache      | Bin 0 -&gt; 152 bytes
+ .../ChessEngine.csproj.CoreCompileInputs.cache     |   1 +
+ .../net6.0/ChessEngine.csproj.FileListAbsolute.txt |  16 +
+ .../net6.0/ChessEngine.genruntimeconfig.cache      |   1 +
+ src/obj/Debug/net6.0/ChessEngine.sourcelink.json   |   1 +
+ .../.NETCoreApp,Version=v6.0.AssemblyAttributes.cs |   4 +
+ src/obj/Release/net6.0/ChessEngine.AssemblyInfo.cs |  22 +
+ .../net6.0/ChessEngine.AssemblyInfoInputs.cache    |   1 +
+ ...ngine.GeneratedMSBuildEditorConfig.editorconfig |  13 +
+ .../Release/net6.0/ChessEngine.GlobalUsings.g.cs   |   8 +
+ src/obj/Release/net6.0/ChessEngine.assets.cache    | Bin 0 -&gt; 152 bytes
+ .../ChessEngine.csproj.CoreCompileInputs.cache     |   1 +
+ .../net6.0/ChessEngine.csproj.FileListAbsolute.txt |  13 +
+ .../net6.0/ChessEngine.genruntimeconfig.cache      |   1 +
+ .../Release/net6.0/PublishOutputs.0744f8c7a5.txt   |   5 +
+ .../Release/net6.0/PublishOutputs.2bb1bdfc17.txt   |   5 +
+ .../Release/net6.0/PublishOutputs.5457c26baf.txt   |   5 +
+ .../Release/net6.0/PublishOutputs.5bfbc98c5c.txt   |   4 +
+ .../Release/net6.0/PublishOutputs.8968d62112.txt   |   4 +
+ .../Release/net6.0/PublishOutputs.bcb599e8c3.txt   |   4 +
+ .../Release/net6.0/PublishOutputs.cdd3174532.txt   |   5 +
+ src/obj/project.assets.json                        |  89 ++++
+ src/obj/project.nuget.cache                        |  13 +
+ 123 files changed, 5389 insertions(+), 30 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CHECKLIST.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.0/ChessEngine.deps.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.0/ChessEngine.runtimeconfig.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.1/ChessEngine.deps.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.1/ChessEngine.runtimeconfig.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.2/ChessEngine.deps.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.2/ChessEngine.runtimeconfig.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">backups/dist_backup_20250817_172447/v0.3/ChessAI_v0.3.deps.json</code></li>
+  <li>… and 113 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the c0br4 chess engine. These changes contribute to the overall development and refinement of the engine.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the c0br4 repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">c0br4</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/16/c0br4-completed-v20-rook-coordination-filerank-alignment-open-files-doubled-ro.html">&larr; C0BR4: ✅ Completed v2.0: Rook Coordination - File/rank alignment, open files, doubled rooks King Safety - Pawn shield, enemy attacks, castling status King Endgame - Centralization, pawn support, opposition Castling Incentive - Encourage castling, penalize lost rights Castling Rights - Preservation bonuses, proper development timing Opening Book - London System, Vienna Gambit, Caro-Kann, Dutch Defense Opening Book Features: Embedded C# arrays for fast access Minimal starter lines focused on center control Random selection between e4/d4 for White Choreographed first 2 moves for proper development Automatic fallback to engine search after opening phase The engine now has a solid foundation with:</a><a class="next" href="/chess-engine/development/2025/08/16/engine-tester-chessaiv10.html">ENGINE-TESTER: ChessAI_v1.0 &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

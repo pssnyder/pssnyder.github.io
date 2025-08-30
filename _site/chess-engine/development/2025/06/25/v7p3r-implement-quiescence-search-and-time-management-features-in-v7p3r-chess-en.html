@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>V7P3R: Implement quiescence search and time management features in v7p3r chess engine | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in v7p3r: Implement quiescence search and time management features in v7p3r chess engine">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/06/25/v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-en.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>V7P3R: Implement quiescence search and time management features in v7p3r chess engine | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="V7P3R: Implement quiescence search and time management features in v7p3r chess engine" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in v7p3r: Implement quiescence search and time management features in v7p3r chess engine" />
+<meta property="og:description" content="Development milestone in v7p3r: Implement quiescence search and time management features in v7p3r chess engine" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/06/25/v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-en.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/06/25/v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-en.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-25T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="V7P3R: Implement quiescence search and time management features in v7p3r chess engine" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-06-25T20:00:00-04:00","datePublished":"2025-06-25T20:00:00-04:00","description":"Development milestone in v7p3r: Implement quiescence search and time management features in v7p3r chess engine","headline":"V7P3R: Implement quiescence search and time management features in v7p3r chess engine","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/06/25/v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-en.html"},"url":"http://localhost:4000/chess-engine/development/2025/06/25/v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-en.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">V7P3R: Implement quiescence search and time management features in v7p3r chess engine</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-06-25T20:00:00-04:00">
+        June 25, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="v7p3r-implement-quiescence-search-and-time-management-features-in-v7p3r-chess-engine">V7P3R: Implement quiescence search and time management features in v7p3r chess engine</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/v7p3r">v7p3r</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/v7p3r/commit/c63de88cfb72f81cc09fa0a8b27c0183763943e1"><code class="language-plaintext highlighter-rouge">c63de88c</code></a>
+<strong>Date:</strong> 2025-06-26</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Implement quiescence search and time management features in v7p3r chess engine</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> chess_game.py                                      |    16 +-
+ engine_utilities/best_move_finder.py               |     6 +-
+ testing/create_test_data.py                        |   106 -
+ testing/launch_unit_testing_suite.py               |   741 -
+ testing/quick_test.py                              |   202 -
+ testing/results/test_results_20250622_143317.json  |   117 -
+ testing/results/test_results_20250622_143414.json  |   117 -
+ testing/results/test_results_20250624_233834.json  |   113 -
+ testing/results/test_results_20250624_234223.json  |   113 -
+ testing/results/test_results_20250624_234520.json  |   113 -
+ testing/results/test_results_20250624_234724.json  |   113 -
+ .../adaptive_elo_finder_testing.py                 |     2 -
+ .../best_move_finder_testing.py                    |     2 -
+ testing/unit_test_launchers/chess_game_testing.py  |   404 -
+ .../engine_db_manager_testing.py                   |   375 -
+ testing/unit_test_launchers/etl_monitor_testing.py |     2 -
+ .../unit_test_launchers/etl_processor_testing.py   |     2 -
+ .../unit_test_launchers/etl_scheduler_testing.py   |     2 -
+ .../game_simulation_manager_testing.py             |    43 -
+ .../unit_test_launchers/opening_book_testing.py    |   448 -
+ .../unit_test_launchers/run_elo_finder_testing.py  |     2 -
+ .../stockfish_handler_testing.py                   |   472 -
+ testing/unit_test_launchers/v7p3r_ga_testing.py    |   158 -
+ testing/unit_test_launchers/v7p3r_nn_testing.py    |   182 -
+ testing/unit_test_launchers/v7p3r_rl_testing.py    |    92 -
+ testing/unit_test_launchers/v7p3r_testing.py       |   377 -
+ v7p3r_engine/v7p3r.py                              |   793 --
+ v7p3r_engine/{opening_book.py =&gt; v7p3r_book.py}    |    57 +-
+ v7p3r_engine/v7p3r_eval.py                         |   244 +
+ v7p3r_engine/v7p3r_handlers.py                     |   141 +
+ v7p3r_engine/v7p3r_ordering.py                     |    77 +
+ .../{piece_square_tables.py =&gt; v7p3r_pst.py}       |     8 +-
+ v7p3r_engine/v7p3r_quiescence.py                   |    60 +
+ v7p3r_engine/v7p3r_score.py                        |     7 +-
+ v7p3r_engine/v7p3r_search.py                       |    32 +-
+ v7p3r_engine/{time_manager.py =&gt; v7p3r_time.py}    |     6 +-
+ v7p3r_ga_engine/v7p3r_ga.py                        |    10 +-
+ .../v7p3r_nn_training_data/v7p3r_20250530 copy.pgn | 14072 -------------------
+ ...evaluate_v7p3r_nn.py =&gt; v7p3r_nn_validation.py} |     4 +-
+ v7p3r_rl_engine/v7p3r_rl.py                        |    15 +-
+ 53 files changed, 614 insertions(+), 19232 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chess_game.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">engine_utilities/best_move_finder.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/create_test_data.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/launch_unit_testing_suite.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/quick_test.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/results/test_results_20250622_143317.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/results/test_results_20250622_143414.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/results/test_results_20250624_233834.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/results/test_results_20250624_234223.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">testing/results/test_results_20250624_234520.json</code></li>
+  <li>… and 43 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the v7p3r chess engine. The changes focus on search algorithm improvements, which are crucial for engine strength.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the v7p3r repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">v7p3r</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/06/25/v7p3r-enhance-v7p3revaluationengine-with-timestamped-logging-and-opening-book-su.html">&larr; V7P3R: Enhance v7p3rEvaluationEngine with timestamped logging and opening book support</a><a class="next" href="/chess-engine/development/2025/06/25/v7p3r-refactor-scoring-calculation-and-configuration-handling-for-improved-clari.html">V7P3R: Refactor scoring calculation and configuration handling for improved clarity and performance &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>V7P3R: updating repo architecture plus v4.1 functional | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in v7p3r: updating repo architecture plus v4.1 functional">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/13/v7p3r-updating-repo-architecture-plus-v41-functional.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>V7P3R: updating repo architecture plus v4.1 functional | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="V7P3R: updating repo architecture plus v4.1 functional" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in v7p3r: updating repo architecture plus v4.1 functional" />
+<meta property="og:description" content="Development milestone in v7p3r: updating repo architecture plus v4.1 functional" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/13/v7p3r-updating-repo-architecture-plus-v41-functional.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/13/v7p3r-updating-repo-architecture-plus-v41-functional.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-13T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="V7P3R: updating repo architecture plus v4.1 functional" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-13T20:00:00-04:00","datePublished":"2025-08-13T20:00:00-04:00","description":"Development milestone in v7p3r: updating repo architecture plus v4.1 functional","headline":"V7P3R: updating repo architecture plus v4.1 functional","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/13/v7p3r-updating-repo-architecture-plus-v41-functional.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/13/v7p3r-updating-repo-architecture-plus-v41-functional.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">V7P3R: updating repo architecture plus v4.1 functional</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-13T20:00:00-04:00">
+        August 13, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="v7p3r-updating-repo-architecture-plus-v41-functional">V7P3R: updating repo architecture plus v4.1 functional</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/v7p3r">v7p3r</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/v7p3r/commit/7e01532c2d2c8f35f682220cf31a5e04ea0252c2"><code class="language-plaintext highlighter-rouge">7e01532c</code></a>
+<strong>Date:</strong> 2025-08-14</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>updating repo architecture plus v4.1 functional</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> build_extraction_utilities/analyze_architecture.py |  294 ---
+ build_extraction_utilities/analyze_builds.py       |  306 ---
+ .../analyze_complete_builds.py                     |  318 ---
+ .../analyze_complete_builds_comprehensive.py       | 1070 ---------
+ .../build_analysis_report_20250724_215105.json     | 2438 --------------------
+ .../extract_all_complete.ps1                       |   88 -
+ .../extract_all_complete_clean.ps1                 |   88 -
+ .../extract_beta_candidates.ps1                    |  153 --
+ .../extract_beta_candidates_comprehensive.ps1      |  164 --
+ .../extract_complete_repo_states.py                |  190 --
+ .../extract_complete_states.ps1                    |  150 --
+ .../extract_comprehensive.ps1                      |  124 -
+ .../generate_individual_build_reports.py           |  986 --------
+ build_extraction_utilities/simple_extract.ps1      |   40 -
+ build_simple_v4_1.ps1                              |   83 +
+ .../v0.6.27_v7p3r_engine/README.md                 |  162 --
+ .../config/v7p3r_rl_config.yaml                    |   12 -
+ .../v0.6.30_v7p3r_engine/config/puzzle_config.yaml |   46 -
+ .../config/simulation_config.yaml                  |  381 ---
+ .../simulation_config_20250625_1312.yaml           |  401 ----
+ .../simulation_config_20250625_1615.yaml           |  405 ----
+ .../config/v7p3r_ga_config.yaml                    |    2 -
+ .../config/v7p3r_webapp_config.yaml                |    1 -
+ .../v0.7.01_v7p3r_engine/docs/RAW_DATA_EXAMPLES.md |  170 --
+ .../v0.7.01_v7p3r_engine/docs/TEST_GUIDE.md        |  177 --
+ .../config/chess_metrics_config.yaml               |   28 -
+ .../config/engine_utilities_config.yaml            |   29 -
+ .../config/stockfish_config.yaml                   |   35 -
+ .../config/unit_testing_config.yaml                |  112 -
+ .../config/v7p3r_nn_config.yaml                    |  106 -
+ .../v0.7.07_v7p3r_engine/docs/TEST_SCENARIOS.md    |  102 -
+ .../docs/UNIT_TESTING_GUIDE.md                     |  400 ----
+ .../docs/UNIT_TESTING_IMPLEMENTATION_COMPLETE.md   |  136 --
+ .../v0.7.07_v7p3r_engine/docs/v7p3r_nn_engine.md   |   93 -
+ .../v0.7.15_v7p3r_engine/docs/.markdownlint.json   |   13 -
+ docs/CAPTURE_ESCAPE_TEST.md                        |   55 -
+ docs/HEADLESS_MODE.md                              |   71 -
+ docs/code_review.md                                |   87 -
+ .../v1.0}/testing/testing-scenarios.md             |    0
+ ... Progress - Big Overhaul Project Key Changes.md |    0
+ .../projects/In Progress - Big Overhaul Project.md |    0
+ .../projects/In Progress - Big_Overhaul_Project.md |    0
+ .../New - Viper Chess Engine Web App Project.md    |    0
+ ...ady - Chess Engine Testing Scenarios Project.md |    0
+ ...ady - Chess_Engine_Testing_Scenarios_Project.md |    0
+ ...- Distributed Computing Architecture Project.md |    0
+ ...- Distributed_Computing Architecture_Project.md |    0
+ .../v1.1}/testing/testing-scenarios.md             |    0
+ .../stockfish/wiki/Advanced-topics.md              |    0
+ .../stockfish/wiki/Compiling-from-source.md        |    0
+ .../stockfish/wiki/Download-and-usage.md           |    0
+ .../wiki/Governance-and-responsibilities.md        |    0
+ .../stockfish/wiki/Regression-Tests.md             |    0
+ .../stockfish/wiki/Stockfish-FAQ.md                |    0
+ .../stockfish/wiki/UCI-&amp;-Commands.md               |    0
+ .../external_engines/stockfish/wiki/Useful-data.md |    0
+ .../metrics/metrics_2025-07-13_20-14-36S.json      |    0
+ .../metrics/metrics_2025-07-13_20-17-17S.json      |    0
+ .../metrics/metrics_2025-07-13_20-22-02S.json      |    0
+ .../metrics/metrics_2025-07-30_20-16-46S.json      |    0
+ .../stockfish/stockfish-windows-x86-64-avx2.exe    |    0
+ releases/v4.0/README.md                            |   62 +
+ releases/v4.0/images/bB.png                        |  Bin 0 -&gt; 7533 bytes
+ releases/v4.0/images/bK.png                        |  Bin 0 -&gt; 7969 bytes
+ releases/v4.0/images/bN.png                        |  Bin 0 -&gt; 7561 bytes
+ releases/v4.0/images/bQ.png                        |  Bin 0 -&gt; 9161 bytes
+ releases/v4.0/images/bR.png                        |  Bin 0 -&gt; 6933 bytes
+ releases/v4.0/images/bp.png                        |  Bin 0 -&gt; 5181 bytes
+ releases/v4.0/images/chess_board_theme.jpg         |    3 +
+ releases/v4.0/images/wB.png                        |  Bin 0 -&gt; 8004 bytes
+ releases/v4.0/images/wK.png                        |  Bin 0 -&gt; 8633 bytes
+ releases/v4.0/images/wN.png                        |  Bin 0 -&gt; 8305 bytes
+ releases/v4.0/images/wQ.png                        |  Bin 0 -&gt; 10615 bytes
+ releases/v4.0/images/wR.png                        |  Bin 0 -&gt; 7782 bytes
+ releases/v4.0/images/wp.png                        |  Bin 0 -&gt; 5667 bytes
+ releases/v4.0/pyrightconfig.json                   |   29 +
+ releases/v4.0/requirements.txt                     |    3 +
+ releases/v4.1/README.md                            |   62 +
+ releases/v4.1/requirements.txt                     |    3 +
+ releases/v4.1/src/config_default.json              |   60 +
+ releases/v4.1/src/v7p3r_book.py                    |  129 ++
+ releases/v4.1/src/v7p3r_config.py                  |   48 +
+ releases/v4.1/src/v7p3r_engine.py                  |  158 ++
+ releases/v4.1/src/v7p3r_move_ordering.py           |  147 ++
+ releases/v4.1/src/v7p3r_mvv_lva.py                 |  103 +
+ releases/v4.1/src/v7p3r_pst.py                     |  132 ++
+ releases/v4.1/src/v7p3r_quiescence.py              |   90 +
+ releases/v4.1/src/v7p3r_rules.py                   |  144 ++
+ releases/v4.1/src/v7p3r_scoring.py                 |  469 ++++
+ releases/v4.1/src/v7p3r_search.py                  |  158 ++
+ releases/v4.1/src/v7p3r_see.py                     |   41 +
+ releases/v4.1/src/v7p3r_time.py                    |   13 +
+ releases/v4.1/src/v7p3r_uci.py                     |  190 ++
+ releases/v4.1/src/v7p3r_utils.py                   |  166 ++
+ releases/v4.1/testing/arena_compatibility_test.py  |   86 +
+ releases/v4.1/testing/manual_uci_test.py           |   51 +
+ releases/v4.1/testing/step_by_step_uci_test.py     |   55 +
+ releases/v4.1/testing/test_exe_final.py            |   72 +
+ releases/v4.1/testing/uci_debug_test.py            |   70 +
+ releases/v4.1/testing/uci_smoke_test.py            |   44 +
+ releases/v4.1/testing/verify_exe_uci.py            |   33 +
+ src/config_default.json                            |   60 +
+ src/v7p3r_book.py                                  |  129 ++
+ src/v7p3r_config.py                                |   48 +
+ src/v7p3r_engine.py                                |  158 ++
+ src/v7p3r_move_ordering.py                         |  147 ++
+ src/v7p3r_mvv_lva.py                               |  103 +
+ src/v7p3r_pst.py                                   |  132 ++
+ src/v7p3r_quiescence.py                            |   90 +
+ src/v7p3r_rules.py                                 |  144 ++
+ src/v7p3r_scoring.py                               |  469 ++++
+ src/v7p3r_search.py                                |  158 ++
+ src/v7p3r_see.py                                   |   41 +
+ src/v7p3r_time.py                                  |   13 +
+ src/v7p3r_uci.py                                   |  190 ++
+ src/v7p3r_utils.py                                 |  166 ++
+ testing/arena_compatibility_test.py                |   86 +
+ testing/manual_uci_test.py                         |   51 +
+ testing/step_by_step_uci_test.py                   |   55 +
+ testing/test_exe_final.py                          |   72 +
+ testing/uci_debug_test.py                          |   70 +
+ testing/uci_smoke_test.py                          |   44 +
+ testing/verify_exe_uci.py                          |   33 +
+ 1155 files changed, 5163 insertions(+), 9433 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">arena_compatibility_test.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/analyze_architecture.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/analyze_builds.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/analyze_complete_builds.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/analyze_complete_builds_comprehensive.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/build_analysis_report_20250724_215105.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/extract_all_complete.ps1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/extract_all_complete_clean.ps1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/extract_beta_candidates.ps1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">build_extraction_utilities/extract_beta_candidates_comprehensive.ps1</code></li>
+  <li>… and 1145 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the v7p3r chess engine. These changes contribute to the overall development and refinement of the engine.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the v7p3r repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">v7p3r</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/13/engine-tester-delete-outdated-focused-analysis-reports-for-cece-cecilia-and-slow.html">&larr; ENGINE-TESTER: Delete outdated focused analysis reports for Cece, Cecilia, and SlowMate engines, including detailed performance metrics and development recommendations. Remove stockfish achievement report as well.</a><a class="next" href="/chess-engine/development/2025/08/14/engine-tester-enhance-unifiedtournamentanalyzer-to-support-normalized-game-stora.html">ENGINE-TESTER: Enhance UnifiedTournamentAnalyzer to support normalized game storage and date range filtering &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

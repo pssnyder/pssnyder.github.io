@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ENGINE-TESTER: new v7p3r v7.0 engine | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in engine-tester: new v7p3r v7.0 engine">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/22/engine-tester-new-v7p3r-v70-engine.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ENGINE-TESTER: new v7p3r v7.0 engine | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ENGINE-TESTER: new v7p3r v7.0 engine" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in engine-tester: new v7p3r v7.0 engine" />
+<meta property="og:description" content="Development milestone in engine-tester: new v7p3r v7.0 engine" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/22/engine-tester-new-v7p3r-v70-engine.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/22/engine-tester-new-v7p3r-v70-engine.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-22T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ENGINE-TESTER: new v7p3r v7.0 engine" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-22T20:00:00-04:00","datePublished":"2025-08-22T20:00:00-04:00","description":"Development milestone in engine-tester: new v7p3r v7.0 engine","headline":"ENGINE-TESTER: new v7p3r v7.0 engine","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/22/engine-tester-new-v7p3r-v70-engine.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/22/engine-tester-new-v7p3r-v70-engine.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">ENGINE-TESTER: new v7p3r v7.0 engine</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-22T20:00:00-04:00">
+        August 22, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="engine-tester-new-v7p3r-v70-engine">ENGINE-TESTER: new v7p3r v7.0 engine</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/engine-tester">engine-tester</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/engine-tester/commit/5bb90adc56f02be56e38ff91ab4026b8aef47265"><code class="language-plaintext highlighter-rouge">5bb90adc</code></a>
+<strong>Date:</strong> 2025-08-23</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>new v7p3r v7.0 engine</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ELO_SYSTEM_SUMMARY.md                              |   139 -
+ GUI_PROGRESS_UPDATE.md                             |   135 -
+ RATING_UPDATE_SUMMARY.md                           |    93 -
+ README_PROD.md                                     |    49 -
+ development/DEV_README.md                          |    42 -
+ development/documentation/DASHBOARD_README.md      |    97 -
+ development/documentation/GUI_PROGRESS_UPDATE.md   |   135 -
+ development/documentation/INTEGRATION_PLAN.md      |   143 -
+ development/documentation/PROGRESS_STATUS.md       |   157 -
+ development/legacy_analyzers/analyze_cece_v2.py    |   151 -
+ development/legacy_analyzers/basic_analyzer.py     |   119 -
+ .../legacy_analyzers/behavioral_analyzer.py        |   475 -
+ .../legacy_analyzers/comprehensive_reporter.py     |   453 -
+ .../convert_unified_to_dashboard.py                |   116 -
+ development/legacy_analyzers/dashboard_complex.py  |  1129 -
+ .../legacy_analyzers/data_quality_checker.py       |   419 -
+ development/legacy_analyzers/enhanced_analyzer.py  |   301 -
+ .../legacy_analyzers/enhanced_metadata_analyzer.py |   707 -
+ .../enhanced_tournament_analyzer.py                |   629 -
+ .../enhanced_tournament_analyzer_simple.py         |   626 -
+ .../legacy_analyzers/focused_engine_analyzer.py    |   585 -
+ development/legacy_analyzers/generate_dashboard.py |   679 -
+ .../legacy_analyzers/generate_dashboard_final.py   |   898 -
+ .../legacy_analyzers/generate_dashboard_fixed.py   |   707 -
+ .../generate_dashboard_timing_openings_fix.py      |   850 -
+ .../legacy_analyzers/generate_decision_diagram.py  |   250 -
+ .../legacy_analyzers/landscape_visualizer.py       |   400 -
+ development/legacy_analyzers/rapid_analyzer.py     |   188 -
+ development/legacy_analyzers/run_full_analytics.py |   100 -
+ development/legacy_analyzers/test_pgn.py           |    26 -
+ development/legacy_analyzers/visualize_results.py  |   233 -
+ development/legacy_code/chess_testing_gui.py       |   829 -
+ development/legacy_code/engine_tester.py           |   378 -
+ development/legacy_code/tournament_analyzer.py     |   519 -
+ .../legacy_code/unified_tournament_analyzer.py     |   795 -
+ .../testing_and_debugging/core_search_test.py      |   215 -
+ .../testing_and_debugging/deep_search_test.py      |   215 -
+ .../testing_and_debugging/performance_analysis.py  |   190 -
+ .../performance_goals_test.py                      |   375 -
+ .../performance_test_suite.py                      |   324 -
+ .../quick_performance_test.py                      |   123 -
+ .../robust_performance_test.py                     |   327 -
+ .../testing_and_debugging/test_chess_core.py       |    55 -
+ .../testing_and_debugging/test_engine_discovery.py |    61 -
+ ...chess_test_20250816_102217_20250816_102258.json |    59 -
+ ...0250816_102217_20250816_102258_performance.json |    33 -
+ .../testing_and_debugging/test_session_logger.py   |   328 -
+ development/utility_scripts/check_rankings.py      |    56 -
+ .../utility_scripts/extract_godot_opponents.py     |   159 -
+ .../utility_scripts/generate_enhanced_analysis.bat |    36 -
+ engines/V7P3R/V7P3R_v7.0.exe                       |     3 +
+ launch_dashboards.py                               |   111 -
+ man_vs_machine_scoreboard/MvM_README.md            |   132 -
+ .../analyzers/mvm_analyzer.py                      |   622 -
+ .../dashboard/data/mvm_analysis.json               | 61879 -------------------
+ .../dashboard/mvm_dashboard.py                     |   571 -
+ man_vs_machine_scoreboard/launch_mvm_dashboard.py  |    72 -
+ man_vs_machine_scoreboard/requirements.txt         |    30 -
+ .../SlowMate Tournament 20250720.at                |   101 -
+ .../SlowMate Tournament 20250720.html              |     1 -
+ .../SlowMate Tournament 20250720.log               |  5877 --
+ .../SlowMate Tournament 20250720.pgn               | 21226 -------
+ .../SlowMate Tournament 20250720.res               |    64 -
+ .../SlowMate Tournament 20250720.txt               |    19 -
+ .../SlowMate Tournament 20250720_1104.pgn          |  3212 -
+ .../SlowMate Tournament 20250721.at                |   108 -
+ .../SlowMate Tournament 20250721.pgn               | 12474 ----
+ .../SlowMate Tournament 20250722 2323.at           |   107 -
+ .../SlowMate Tournament 20250722 2323.html         |     1 -
+ .../SlowMate Tournament 20250722 2323.log          |   261 -
+ .../SlowMate Tournament 20250722 2323.pgn          |   849 -
+ .../SlowMate Tournament 20250722 2323.res          |    57 -
+ .../SlowMate Tournament 20250722 2323.txt          |    24 -
+ .../SlowMate Tournament 20250722.at                |    82 -
+ .../SlowMate Tournament 20250722.html              |     1 -
+ .../SlowMate Tournament 20250722.log               |   717 -
+ .../SlowMate Tournament 20250722.pgn               |  2266 -
+ .../SlowMate Tournament 20250722.res               |    16 -
+ .../SlowMate Tournament 20250722.txt               |    15 -
+ .../Engine Battle 20250728.at                      |   106 -
+ .../Engine Battle 20250728.html                    |     1 -
+ .../Engine Battle 20250728.log                     |  1305 -
+ .../Engine Battle 20250728.pgn                     |  4847 --
+ .../Engine Battle 20250728.res                     |    57 -
+ .../Engine Battle 20250728.txt                     |    20 -
+ .../Engine Battle 20250803.at                      |    84 -
+ .../Engine Battle 20250803.html                    |     1 -
+ .../Engine Battle 20250803.log                     |   465 -
+ .../Engine Battle 20250803.pgn                     |    98 -
+ .../Engine Battle 20250803.res                     |     9 -
+ .../Engine Battle 20250803.txt                     |    14 -
+ .../Engine Battle 20250806.at                      |    80 -
+ .../Engine Battle 20250806.pgn                     |  1915 -
+ .../Engine Battle 20250807.at                      |    82 -
+ .../Engine Battle 20250807.html                    |     1 -
+ .../Engine Battle 20250807.log                     |   741 -
+ .../Engine Battle 20250807.pgn                     |  3057 -
+ .../Engine Battle 20250807.res                     |    16 -
+ .../Engine Battle 20250807.txt                     |    15 -
+ .../Engine Battle 20250808.at                      |   325 -
+ .../Engine Battle 20250808.html                    |     1 -
+ .../Engine Battle 20250808.log                     | 10725 ----
+ .../Engine Battle 20250808.pgn                     | 36032 -----------
+ .../Engine Battle 20250808.res                     |   484 -
+ .../Engine Battle 20250808.txt                     |    33 -
+ .../tournament_analysis_20250808.json              | 10484 ----
+ .../tournament_analysis_20250808.md                |   264 -
+ .../Engine Battle 20250809.at                      |   126 -
+ .../Engine Battle 20250809.html                    |     1 -
+ .../Engine Battle 20250809.log                     |  3847 --
+ .../Engine Battle 20250809.pgn                     | 11761 ----
+ .../Engine Battle 20250809.res                     |    81 -
+ .../Engine Battle 20250809.txt                     |    20 -
+ ...tournament_analysis_Engine_Battle_20250809.json |  2453 -
+ .../tournament_analysis_Engine_Battle_20250809.md  |   133 -
+ .../Engine Battle 20250810.at                      |   100 -
+ .../Engine Battle 20250810.html                    |     1 -
+ .../Engine Battle 20250810.log                     |  2517 -
+ .../Engine Battle 20250810.pgn                     |  6693 --
+ .../Engine Battle 20250810.res                     |    49 -
+ .../Engine Battle 20250810.txt                     |    18 -
+ .../Engine Battle 20250810_2.at                    |   107 -
+ .../Engine Battle 20250810_2.html                  |     1 -
+ .../Engine Battle 20250810_2.log                   |  2997 -
+ .../Engine Battle 20250810_2.pgn                   |  6889 ---
+ .../Engine Battle 20250810_2.res                   |    49 -
+ .../Engine Battle 20250810_2.txt                   |    18 -
+ .../Engine Battle 20250811.at                      |   138 -
+ .../Engine Battle 20250811.html                    |     1 -
+ .../Engine Battle 20250811.log                     | 11277 ----
+ .../Engine Battle 20250811.pgn                     | 30728 ---------
+ .../Engine Battle 20250811.res                     |   121 -
+ .../Engine Battle 20250811.txt                     |    22 -
+ .../Engine Battle 20250811_2.at                    |    89 -
+ .../Engine Battle 20250811_2.html                  |     1 -
+ .../Engine Battle 20250811_2.log                   |  1929 -
+ .../Engine Battle 20250811_2.pgn                   |  4438 --
+ .../Engine Battle 20250811_2.res                   |    25 -
+ .../Engine Battle 20250811_2.txt                   |    20 -
+ .../Engine Battle Demo PC 20250811.at              |   372 -
+ .../Engine Battle Demo PC 20250811.html            |     1 -
+ .../Engine Battle Demo PC 20250811.log             |  9873 ---
+ .../Engine Battle Demo PC 20250811.pgn             | 30843 ---------
+ .../Engine Battle Demo PC 20250811.res             |   576 -
+ .../Engine Battle Demo PC 20250811.txt             |    35 -
+ .../Engine Battle 20250812.at                      |   117 -
+ .../Engine Battle 20250812.html                    |     1 -
+ .../Engine Battle 20250812.log                     |   861 -
+ .../Engine Battle 20250812.pgn                     |  2232 -
+ .../Engine Battle 20250812.res                     |    81 -
+ .../Engine Battle 20250812.txt                     |    20 -
+ .../Engine Battle 20250812_2.at                    |   100 -
+ .../Engine Battle 20250812_2.html                  |     1 -
+ .../Engine Battle 20250812_2.log                   |  2517 -
+ .../Engine Battle 20250812_2.pgn                   |  6987 ---
+ .../Engine Battle 20250812_2.res                   |    49 -
+ .../Engine Battle 20250812_2.txt                   |    18 -
+ .../Engine Battle 20250812_3.at                    |   100 -
+ .../Engine Battle 20250812_3.html                  |     1 -
+ .../Engine Battle 20250812_3.log                   |   513 -
+ .../Engine Battle 20250812_3.pgn                   |  1384 -
+ .../Engine Battle 20250812_3.res                   |    49 -
+ .../Engine Battle 20250812_3.txt                   |    18 -
+ .../Engine Battle Demo PC 20250812.at              |   208 -
+ .../Engine Battle Demo PC 20250812.html            |     1 -
+ .../Engine Battle Demo PC 20250812.log             |  2877 -
+ .../Engine Battle Demo PC 20250812.pgn             |  8400 ---
+ .../Engine Battle Demo PC 20250812.res             |   256 -
+ .../Engine Battle Demo PC 20250812.txt             |    27 -
+ .../Engine Battle Demo PC 20250812_2.at            |   139 -
+ .../Engine Battle Demo PC 20250812_2.html          |     1 -
+ .../Engine Battle Demo PC 20250812_2.log           |  7917 ---
+ .../Engine Battle Demo PC 20250812_2.pgn           | 19784 ------
+ .../Engine Battle Demo PC 20250812_2.res           |   122 -
+ .../Engine Battle Demo PC 20250812_2.txt           |    23 -
+ .../Engine Battle 20250813.at                      |   107 -
+ .../Engine Battle 20250813.html                    |     1 -
+ .../Engine Battle 20250813.log                     |  2865 -
+ .../Engine Battle 20250813.pgn                     |  7408 ---
+ .../Engine Battle 20250813.res                     |    49 -
+ .../Engine Battle 20250813.txt                     |    18 -
+ .../Engine Battle Demo PC 20250813.at              |   150 -
+ .../Engine Battle Demo PC 20250813.html            |     1 -
+ .../Engine Battle Demo PC 20250813.log             |  6849 --
+ .../Engine Battle Demo PC 20250813.pgn             | 19107 ------
+ .../Engine Battle Demo PC 20250813.res             |   144 -
+ .../Engine Battle Demo PC 20250813.txt             |    23 -
+ .../Engine Battle 20250814.at                      |   108 -
+ .../Engine Battle 20250814.html                    |     1 -
+ .../Engine Battle 20250814.log                     |  3357 -
+ .../Engine Battle 20250814.pgn                     |  8255 ---
+ .../Engine Battle 20250814.res                     |    64 -
+ .../Engine Battle 20250814.txt                     |    19 -
+ .../Engine Battle Demo PC 20250814.at              |   117 -
+ .../Engine Battle Demo PC 20250814.html            |     1 -
+ .../Engine Battle Demo PC 20250814.log             |  4317 --
+ .../Engine Battle Demo PC 20250814.pgn             | 10618 ----
+ .../Engine Battle Demo PC 20250814.res             |    81 -
+ .../Engine Battle Demo PC 20250814.txt             |    20 -
+ .../Engine Battle 20250815.at                      |   100 -
+ .../Engine Battle 20250815.html                    |     1 -
+ .../Engine Battle 20250815.log                     |  2517 -
+ .../Engine Battle 20250815.pgn                     |  6273 --
+ .../Engine Battle 20250815.res                     |    49 -
+ .../Engine Battle 20250815.txt                     |    18 -
+ .../Engine Battle Demo PC 20250815.at              |   177 -
+ .../Engine Battle Demo PC 20250815.html            |     1 -
+ .../Engine Battle Demo PC 20250815.log             | 17661 ------
+ .../Engine Battle Demo PC 20250815.pgn             | 48533 ---------------
+ .../Engine Battle Demo PC 20250815.res             |   196 -
+ .../Engine Battle Demo PC 20250815.txt             |    25 -
+ .../Engine Battle Mini PC 20250815.at              |    93 -
+ .../Engine Battle Mini PC 20250815.html            |     1 -
+ .../Engine Battle Mini PC 20250815.log             |  3597 --
+ .../Engine Battle Mini PC 20250815.pgn             |  7648 ---
+ .../Engine Battle Mini PC 20250815.res             |    36 -
+ .../Engine Battle Mini PC 20250815.txt             |    17 -
+ .../Engine Battle Mini PC 20250816.at              |   138 -
+ .../Engine Battle Mini PC 20250816.html            |     1 -
+ .../Engine Battle Mini PC 20250816.log             |  6465 --
+ .../Engine Battle Mini PC 20250816.pgn             | 16282 -----
+ .../Engine Battle Mini PC 20250816.res             |   121 -
+ .../Engine Battle Mini PC 20250816.txt             |    22 -
+ .../Engine Battle 20250817.at                      |   101 -
+ .../Engine Battle 20250817.html                    |     1 -
+ .../Engine Battle 20250817.log                     |  1329 -
+ .../Engine Battle 20250817.pgn                     |  2946 -
+ .../Engine Battle 20250817.res                     |    49 -
+ .../Engine Battle 20250817.txt                     |    18 -
+ .../Engine Battle 20250817_2.at                    |    82 -
+ .../Engine Battle 20250817_2.html                  |     1 -
+ .../Engine Battle 20250817_2.log                   |   717 -
+ .../Engine Battle 20250817_2.pgn                   |  1641 -
+ .../Engine Battle 20250817_2.res                   |    16 -
+ .../Engine Battle 20250817_2.txt                   |    15 -
+ .../Engine Battle 20250817_3.at                    |   100 -
+ .../Engine Battle 20250817_3.html                  |     1 -
+ .../Engine Battle 20250817_3.log                   |  2517 -
+ .../Engine Battle 20250817_3.pgn                   |  5860 --
+ .../Engine Battle 20250817_3.res                   |    49 -
+ .../Engine Battle 20250817_3.txt                   |    18 -
+ .../Engine Battle Demo PC 20250817.at              |   138 -
+ .../Engine Battle Demo PC 20250817.log             |  5393 --
+ .../Engine Battle Demo PC 20250817.pgn             | 14290 -----
+ .../Engine Battle 20250818.at                      |    93 -
+ .../Engine Battle 20250818.html                    |     1 -
+ .../Engine Battle 20250818.log                     |  3597 --
+ .../Engine Battle 20250818.pgn                     |  7916 ---
+ .../Engine Battle 20250818.res                     |    36 -
+ .../Engine Battle 20250818.txt                     |    17 -
+ .../Engine Battle 20250818_2.at                    |    82 -
+ .../Engine Battle 20250818_2.html                  |     1 -
+ .../Engine Battle 20250818_2.log                   |  1437 -
+ .../Engine Battle 20250818_2.pgn                   |  3159 -
+ .../Engine Battle 20250818_2.res                   |    16 -
+ .../Engine Battle 20250818_2.txt                   |    15 -
+ .../Engine Battle Demo PC 20250818.at              |    82 -
+ .../Engine Battle Demo PC 20250818.html            |     1 -
+ .../Engine Battle Demo PC 20250818.log             |   222 -
+ .../Engine Battle Demo PC 20250818.pgn             |   412 -
+ .../Engine Battle Demo PC 20250818.res             |    17 -
+ .../Engine Battle Demo PC 20250818.txt             |    24 -
+ .../Engine Battle Demo PC 20250818_2.at            |   150 -
+ .../Engine Battle Demo PC 20250818_2.html          |     1 -
+ .../Engine Battle Demo PC 20250818_2.log           |  7929 ---
+ .../Engine Battle Demo PC 20250818_2.pgn           | 17378 ------
+ .../Engine Battle Demo PC 20250818_2.res           |   144 -
+ .../Engine Battle Demo PC 20250818_2.txt           |    23 -
+ .../Engine Battle Demo PC 20250819.at              |    87 -
+ .../Engine Battle Demo PC 20250819.html            |     1 -
+ .../Engine Battle Demo PC 20250819.log             |  1197 -
+ .../Engine Battle Demo PC 20250819.pgn             |  2711 -
+ .../Engine Battle Demo PC 20250819.res             |    25 -
+ .../Engine Battle Demo PC 20250819.txt             |    16 -
+ .../Engine Battle 20250820.at                      |    87 -
+ .../Engine Battle 20250820.html                    |     1 -
+ .../Engine Battle 20250820.log                     |  1197 -
+ .../Engine Battle 20250820.pgn                     |  2519 -
+ .../Engine Battle 20250820.res                     |    25 -
+ .../Engine Battle 20250820.txt                     |    16 -
+ .../Engine Battle 20250820_2.at                    |    78 -
+ .../Engine Battle 20250820_2.html                  |     1 -
+ .../Engine Battle 20250820_2.log                   |   249 -
+ .../Engine Battle 20250820_2.pgn                   |   511 -
+ .../Engine Battle 20250820_2.res                   |     8 -
+ .../Engine Battle 20250820_2.txt                   |    15 -
+ .../Engine Battle Demo PC 20250820.at              |    93 -
+ .../Engine Battle Demo PC 20250820.html            |     1 -
+ .../Engine Battle Demo PC 20250820.log             |  1797 -
+ .../Engine Battle Demo PC 20250820.pgn             |  4176 --
+ .../Engine Battle Demo PC 20250820.res             |    36 -
+ .../Engine Battle Demo PC 20250820.txt             |    17 -
+ .../Best of Engine Battle 20250821.at              |    82 -
+ .../Best of Engine Battle 20250821.html            |     1 -
+ .../Best of Engine Battle 20250821.log             |   717 -
+ .../Best of Engine Battle 20250821.pgn             |  1553 -
+ .../Best of Engine Battle 20250821.res             |    16 -
+ .../Best of Engine Battle 20250821.txt             |    15 -
+ .../Engine Battle 20250821.at                      |    87 -
+ .../Engine Battle 20250821.html                    |     1 -
+ .../Engine Battle 20250821.log                     |   777 -
+ .../Engine Battle 20250821.pgn                     |  1982 -
+ .../Engine Battle 20250821.res                     |    25 -
+ .../Engine Battle 20250821.txt                     |    16 -
+ .../Engine Battle 20250821_2.at                    |    82 -
+ .../Engine Battle 20250821_2.html                  |     1 -
+ .../Engine Battle 20250821_2.log                   |   717 -
+ .../Engine Battle 20250821_2.pgn                   |  2410 -
+ .../Engine Battle 20250821_2.res                   |    16 -
+ .../Engine Battle 20250821_2.txt                   |    15 -
+ .../Engine Battle 20250821_3.at                    |    78 -
+ .../Engine Battle 20250821_3.html                  |     1 -
+ .../Engine Battle 20250821_3.log                   |   357 -
+ .../Engine Battle 20250821_3.pgn                   |   975 -
+ .../Engine Battle 20250821_3.res                   |     9 -
+ .../Engine Battle 20250821_3.txt                   |    14 -
+ .../Engine Battle Demo PC 20250821.at              |    82 -
+ .../Engine Battle Demo PC 20250821.html            |     1 -
+ .../Engine Battle Demo PC 20250821.log             |  1437 -
+ .../Engine Battle Demo PC 20250821.pgn             |  3084 -
+ .../Engine Battle Demo PC 20250821.res             |    16 -
+ .../Engine Battle Demo PC 20250821.txt             |    15 -
+ .../Engine Battle Demo PC 20250821_2.at            |    82 -
+ .../Engine Battle Demo PC 20250821_2.html          |     1 -
+ .../Engine Battle Demo PC 20250821_2.log           |   717 -
+ .../Engine Battle Demo PC 20250821_2.pgn           |  1668 -
+ .../Engine Battle Demo PC 20250821_2.res           |    16 -
+ .../Engine Battle Demo PC 20250821_2.txt           |    15 -
+ .../Engine Battle Demo PC 20250821_3.at            |    87 -
+ .../Engine Battle Demo PC 20250821_3.html          |     1 -
+ .../Engine Battle Demo PC 20250821_3.log           |  1197 -
+ .../Engine Battle Demo PC 20250821_3.pgn           |  2657 -
+ .../Engine Battle Demo PC 20250821_3.res           |    25 -
+ .../Engine Battle Demo PC 20250821_3.txt           |    16 -
+ .../Best of Engine Battle 20250822.at              |   100 -
+ .../Best of Engine Battle 20250822.html            |     1 -
+ .../Best of Engine Battle 20250822.log             |  1377 -
+ .../Best of Engine Battle 20250822.pgn             |  3746 --
+ .../Best of Engine Battle 20250822.res             |    49 -
+ .../Best of Engine Battle 20250822.txt             |    18 -
+ .../Engine Battle 20250822_2.at                    |    95 -
+ .../Engine Battle 20250822_2.html                  |     1 -
+ .../Engine Battle 20250822_2.log                   |   297 -
+ .../Engine Battle 20250822_2.pgn                   |   853 -
+ .../Engine Battle 20250822_2.res                   |    39 -
+ .../Engine Battle 20250822_2.txt                   |    18 -
+ unified_tournament_analyzer.py                     |   795 -
+ 354 files changed, 3 insertions(+), 676423 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ELO_SYSTEM_SUMMARY.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GUI_PROGRESS_UPDATE.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">INTEGRATION_PLAN.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PROGRESS_STATUS.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RATING_UPDATE_SUMMARY.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">README_PROD.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">development/DEV_README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">development/README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">development/documentation/DASHBOARD_README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">development/documentation/GUI_PROGRESS_UPDATE.md</code></li>
+  <li>… and 344 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the engine-tester chess engine. These changes contribute to the overall development and refinement of the engine.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the engine-tester repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">engine-tester</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/22/engine-tester-c0br4-hotfix-v21-and-updates-to-battle-framework.html">&larr; ENGINE-TESTER: c0br4 hotfix v2.1 and updates to battle framework</a><a class="next" href="/chess-engine/development/2025/08/22/v7p3r-remove-deprecated-optimization-demo-and-test-files-for-v7p3r-v62.html">V7P3R: Remove deprecated optimization demo and test files for V7P3R v6.2 &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

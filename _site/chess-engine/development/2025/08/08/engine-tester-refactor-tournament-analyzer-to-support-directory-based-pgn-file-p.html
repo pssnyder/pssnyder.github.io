@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in engine-tester: Refactor Tournament Analyzer to support directory-based PGN file processing">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in engine-tester: Refactor Tournament Analyzer to support directory-based PGN file processing" />
+<meta property="og:description" content="Development milestone in engine-tester: Refactor Tournament Analyzer to support directory-based PGN file processing" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-08T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-08T20:00:00-04:00","datePublished":"2025-08-08T20:00:00-04:00","description":"Development milestone in engine-tester: Refactor Tournament Analyzer to support directory-based PGN file processing","headline":"ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/08/engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-p.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-08T20:00:00-04:00">
+        August 08, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="engine-tester-refactor-tournament-analyzer-to-support-directory-based-pgn-file-processing">ENGINE-TESTER: Refactor Tournament Analyzer to support directory-based PGN file processing</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/engine-tester">engine-tester</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/engine-tester/commit/c368009534411b9356cee407cf0198cf2db10b1a"><code class="language-plaintext highlighter-rouge">c3680095</code></a>
+<strong>Date:</strong> 2025-08-09</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Refactor Tournament Analyzer to support directory-based PGN file processing</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Functioning_Engines_20250807/Cece_v1.0.exe         |   Bin 54691354 -&gt; 0 bytes
+ Functioning_Engines_20250807/Cece_v1.1.exe         |   Bin 8938887 -&gt; 0 bytes
+ Functioning_Engines_20250807/Cece_v1.2.exe         |   Bin 10827972 -&gt; 0 bytes
+ Functioning_Engines_20250807/Cece_v1.3.exe         |   Bin 54697162 -&gt; 0 bytes
+ .../Cecilia_v0.1.0_Basic.exe                       |   Bin 10940277 -&gt; 0 bytes
+ .../SlowMate_v0.0.0_DELTA.exe                      |   Bin 10751513 -&gt; 0 bytes
+ .../SlowMate_v0.0.10_Tactical_Intelligence.exe     |   Bin 10761748 -&gt; 0 bytes
+ .../SlowMate_v0.1.01_Tactics.exe                   |   Bin 10889399 -&gt; 0 bytes
+ .../SlowMate_v0.1.02_Opening_Endgame.exe           |   Bin 10785880 -&gt; 0 bytes
+ .../SlowMate_v0.1.03_Middlegame.exe                |   Bin 10792507 -&gt; 0 bytes
+ .../SlowMate_v0.1.0_BETA.exe                       |   Bin 8262943 -&gt; 0 bytes
+ .../SlowMate_v0.2.01_Enhanced_Search.exe           |   Bin 8642107 -&gt; 0 bytes
+ .../SlowMate_v0.2.02_Time_Management.exe           |   Bin 8902981 -&gt; 0 bytes
+ .../SlowMate_v0.2.0_BETA.exe                       |   Bin 10792960 -&gt; 0 bytes
+ .../SlowMate_v0.3.01_Opening_Enhancements.exe      |   Bin 8920428 -&gt; 0 bytes
+ .../SlowMate_v0.3.02_Enhanced_Endgame.exe          |   Bin 8953171 -&gt; 0 bytes
+ ...Mate_v0.3.03_Version_vs_Version_Nuclear_Fix.exe |   Bin 8963497 -&gt; 0 bytes
+ .../SlowMate_v0.3.0_BETA.exe                       |   Bin 8920428 -&gt; 0 bytes
+ .../SlowMate_v0.4.02_Time_Revision.exe             |   Bin 8622503 -&gt; 0 bytes
+ .../SlowMate_v0.4.03_Stable_Baseline.exe           |   Bin 8621436 -&gt; 0 bytes
+ .../SlowMate_v0.4.0_BETA.exe                       |   Bin 8584931 -&gt; 0 bytes
+ .../SlowMate_v0.5.0_BETA.exe                       |   Bin 8972669 -&gt; 0 bytes
+ dashboard.py                                       |   152 +-
+ logging/evaluation_engine.log                      |  3080 -
+ logging/scoring_calculation.log                    | 61503 -------------------
+ .../Engine Battle 20250728.at                      |   106 +
+ .../Engine Battle 20250728.html                    |     1 +
+ .../Engine Battle 20250728.log                     |  1305 +
+ .../Engine Battle 20250728.pgn                     |  4847 ++
+ .../Engine Battle 20250728.res                     |    57 +
+ .../Engine Battle 20250728.txt                     |    20 +
+ .../Engine Battle 20250803.at                      |    84 +
+ .../Engine Battle 20250803.html                    |     1 +
+ .../Engine Battle 20250803.log                     |   465 +
+ .../Engine Battle 20250803.pgn                     |    98 +
+ .../Engine Battle 20250803.res                     |     9 +
+ .../Engine Battle 20250803.txt                     |    14 +
+ .../Engine Battle 20250806.at                      |    80 +
+ .../Engine Battle 20250806.pgn                     |  1915 +
+ .../Engine Battle 20250807.at                      |    82 +
+ .../Engine Battle 20250807.html                    |     1 +
+ .../Engine Battle 20250807.log                     |   741 +
+ .../Engine Battle 20250807.pgn                     |  3057 +
+ .../Engine Battle 20250807.res                     |    16 +
+ .../Engine Battle 20250807.txt                     |    15 +
+ .../Engine Battle 20250808.at                      |   325 +
+ .../Engine Battle 20250808.html                    |     1 +
+ .../Engine Battle 20250808.log                     | 10725 ++++
+ .../Engine Battle 20250808.pgn                     | 10289 ++++
+ .../Engine Battle 20250808.res                     |   484 +
+ .../Engine Battle 20250808.txt                     |    33 +
+ .../Engine Battle 20250809.at                      |   126 +
+ .../Engine Battle 20250809.html                    |     1 +
+ .../Engine Battle 20250809.log                     |  3847 ++
+ .../Engine Battle 20250809.pgn                     | 11761 ++++
+ .../Engine Battle 20250809.res                     |    81 +
+ .../Engine Battle 20250809.txt                     |    20 +
+ ...tournament_analysis_Engine_Battle_20250809.json |  2453 +
+ .../tournament_analysis_Engine_Battle_20250809.md  |   133 +
+ .../SlowMate Tournament 20250720.at                |   101 +
+ .../SlowMate Tournament 20250720.html              |     1 +
+ .../SlowMate Tournament 20250720.log               |  5877 ++
+ .../SlowMate Tournament 20250720.pgn               | 21226 +++++++
+ .../SlowMate Tournament 20250720.res               |    64 +
+ .../SlowMate Tournament 20250720.txt               |    19 +
+ .../SlowMate Tournament 20250720_1104.pgn          |  3212 +
+ .../SlowMate Tournament 20250721.at                |   108 +
+ .../SlowMate Tournament 20250721.pgn               | 12474 ++++
+ .../SlowMate Tournament 20250722 2323.at           |   107 +
+ .../SlowMate Tournament 20250722 2323.html         |     1 +
+ .../SlowMate Tournament 20250722 2323.log          |   261 +
+ .../SlowMate Tournament 20250722 2323.pgn          |   849 +
+ .../SlowMate Tournament 20250722 2323.res          |    57 +
+ .../SlowMate Tournament 20250722 2323.txt          |    24 +
+ .../SlowMate Tournament 20250722.at                |    82 +
+ .../SlowMate Tournament 20250722.html              |     1 +
+ .../SlowMate Tournament 20250722.log               |   717 +
+ .../SlowMate Tournament 20250722.pgn               |  2266 +
+ .../SlowMate Tournament 20250722.res               |    16 +
+ .../SlowMate Tournament 20250722.txt               |    15 +
+ tournament_analyzer.py                             |   214 +-
+ 85 files changed, 100980 insertions(+), 64640 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/Cece_v1.0.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/Cece_v1.1.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/Cece_v1.2.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/Cece_v1.3.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/Cecilia_v0.1.0_Basic.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/SlowMate_v0.0.0_DELTA.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/SlowMate_v0.0.10_Tactical_Intelligence.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/SlowMate_v0.1.01_Tactics.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/SlowMate_v0.1.02_Opening_Endgame.exe</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Functioning_Engines_20250807/SlowMate_v0.1.03_Middlegame.exe</code></li>
+  <li>… and 75 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the engine-tester chess engine. These changes contribute to the overall development and refinement of the engine.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the engine-tester repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">engine-tester</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/06/slowmate-build-completed-for-v050-add-comprehensive-testing-suite-for-slowmate-v.html">&larr; SLOWMATE: Build Completed for v0.5.0 Add comprehensive testing suite for SlowMate v0.5.0 features</a><a class="next" href="/chess-engine/development/2025/08/09/slowmate-slowmate-v10-release-functional-10-version-now-available-for-tourname.html">SLOWMATE: SlowMate v1.0 RELEASE! - Functional 1.0 version now available for tournament play. - Added multiple test result images and PGN files for evaluation scale verification, depth progression tests, UCI options verification, and time management revisions. - Included tournament results for all SlowMate versions. - Removed outdated hello.py script from the archive. &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

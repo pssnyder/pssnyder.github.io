@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SLOWMATE Performance Analysis | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Comprehensive analysis of slowmate engine performance data">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/notebooks/2025-08-30-slowmate-performance-analysis/">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SLOWMATE Performance Analysis | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="SLOWMATE Performance Analysis" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comprehensive analysis of slowmate engine performance data" />
+<meta property="og:description" content="Comprehensive analysis of slowmate engine performance data" />
+<link rel="canonical" href="http://localhost:4000/notebooks/2025-08-30-slowmate-performance-analysis/" />
+<meta property="og:url" content="http://localhost:4000/notebooks/2025-08-30-slowmate-performance-analysis/" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-30T06:47:57-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SLOWMATE Performance Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-30T06:47:57-04:00","datePublished":"2025-08-30T06:47:57-04:00","description":"Comprehensive analysis of slowmate engine performance data","headline":"SLOWMATE Performance Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebooks/2025-08-30-slowmate-performance-analysis/"},"url":"http://localhost:4000/notebooks/2025-08-30-slowmate-performance-analysis/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" >Journal</a></li>
+          <li><a href="/notebooks/" class="current">Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="notebook">
+  <header class="notebook-header">
+    <h1 class="notebook-title">SLOWMATE Performance Analysis</h1>
+    <div class="notebook-meta">
+      <time class="dt-published" datetime="2025-08-30T06:47:57-04:00">
+        August 30, 2025
+      </time>• <span class="author">Pat Snyder</span></div></header>
+
+  <div class="notebook-content">
+    <h1 id="slowmate-performance-analysis">SLOWMATE Performance Analysis</h1>
+
+<p>Comprehensive analysis of slowmate engine performance data</p>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/slowmate">slowmate</a></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This analysis examines the performance data from the slowmate chess engine, tracking metrics and trends throughout the development process.</p>
+
+<h2 id="data-sources">Data Sources</h2>
+
+<p>The analysis draws from the following data files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">builds/SlowMate_v0.1.02_Beta/data/endgames/tactical_setups.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">builds/SlowMate_v0.0.3_Opening_Book/data/openings/preferences.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">results/enhanced_engine_stats.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">data/endgames/pawn_endings.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">builds/v0.1.03/data/endgames/mate_patterns.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">builds/SlowMate_v0.0.3_Opening_Book/data/openings/mainlines.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">builds/v0.2.0/data/endgames/mate_patterns.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">data/openings/mainlines_enhanced.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">builds/v0.1.02/data/endgames/mate_patterns.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">data/openings/sidelines.json</code></li>
+  <li>… and 69 more files</li>
+</ul>
+
+<h2 id="analysis-objectives">Analysis Objectives</h2>
+
+<p>This notebook aims to:</p>
+
+<ul>
+  <li><strong>Load and examine</strong> performance test results</li>
+  <li><strong>Visualize trends</strong> in engine performance over time</li>
+  <li><strong>Identify patterns</strong> in optimization efforts</li>
+  <li><strong>Compare metrics</strong> across different engine versions</li>
+  <li><strong>Generate insights</strong> for future development priorities</li>
+</ul>
+
+<h2 id="key-metrics">Key Metrics</h2>
+
+<p>The slowmate engine performance analysis typically includes:</p>
+
+<ul>
+  <li><strong>Search Speed</strong>: Nodes per second evaluation</li>
+  <li><strong>Search Depth</strong>: Average and maximum depth reached</li>
+  <li><strong>Move Quality</strong>: Tactical accuracy and positional understanding</li>
+  <li><strong>Time Management</strong>: Efficiency in time allocation</li>
+  <li><strong>Memory Usage</strong>: Resource utilization patterns</li>
+</ul>
+
+<h2 id="interactive-analysis">Interactive Analysis</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Sample analysis code
+</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Set up plotting style for dark theme
+</span><span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'dark_background'</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s">'viridis'</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Analysis notebook for slowmate engine'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="results-summary">Results Summary</h2>
+
+<p>This section will be populated with findings once the analysis is executed.</p>
+
+<h3 id="performance-trends">Performance Trends</h3>
+
+<ul>
+  <li>Engine performance progression over development timeline</li>
+  <li>Impact of major algorithm changes</li>
+  <li>Optimization effectiveness</li>
+</ul>
+
+<h3 id="recommendations">Recommendations</h3>
+
+<p>Based on the performance data analysis:</p>
+
+<ul>
+  <li>Areas showing the most improvement potential</li>
+  <li>Suggested optimization priorities</li>
+  <li>Performance targets for future versions</li>
+</ul>
+
+<hr />
+
+<p><em>This performance analysis was generated from automated repository data mining.</em></p>
+
+  </div><nav class="notebook-navigation"><a class="prev" href="">&larr; </a><a class="next" href="/notebooks/2025-08-30-v7p3r-performance-analysis/">V7P3R Performance Analysis &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

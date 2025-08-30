@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration | Pat Snyder - Project Portfolio & Journal</title>
+    
+    <meta name="description" content="Development milestone in engine-tester: Add engine utilities for evaluation, simulation, and Lichess integration">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/21/engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integra.html">
+    <link rel="alternate" type="application/rss+xml" title="Pat Snyder - Project Portfolio &amp; Journal" href="/feed.xml">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Math rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration | Pat Snyder - Project Portfolio &amp; Journal</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration" />
+<meta name="author" content="Pat Snyder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Development milestone in engine-tester: Add engine utilities for evaluation, simulation, and Lichess integration" />
+<meta property="og:description" content="Development milestone in engine-tester: Add engine utilities for evaluation, simulation, and Lichess integration" />
+<link rel="canonical" href="http://localhost:4000/chess-engine/development/2025/08/21/engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integra.html" />
+<meta property="og:url" content="http://localhost:4000/chess-engine/development/2025/08/21/engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integra.html" />
+<meta property="og:site_name" content="Pat Snyder - Project Portfolio &amp; Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-21T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pat Snyder"},"dateModified":"2025-08-21T20:00:00-04:00","datePublished":"2025-08-21T20:00:00-04:00","description":"Development milestone in engine-tester: Add engine utilities for evaluation, simulation, and Lichess integration","headline":"ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chess-engine/development/2025/08/21/engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integra.html"},"url":"http://localhost:4000/chess-engine/development/2025/08/21/engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integra.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <div class="nav-brand">
+        <a class="site-title" rel="author" href="/">
+          Pat Snyder - Project Portfolio &amp; Journal
+        </a>
+      </div>
+      
+      <div class="nav-menu">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        
+        <ul class="nav-links">
+          <li><a href="/" >Home</a></li>
+          <li><a href="/journal/" class="current">Journal</a></li>
+          <li><a href="/notebooks/" >Notebooks</a></li>
+          <li><a href="/projects/" >Projects</a></li>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank" class="external">Main Site</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2025-08-21T20:00:00-04:00">
+        August 21, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pat Snyder</span>
+          </span>• Categories:<span class="category">chess-engine</span>, <span class="category">development</span></div></header>
+
+  <div class="post-content">
+    <h1 id="engine-tester-add-engine-utilities-for-evaluation-simulation-and-lichess-integration">ENGINE-TESTER: Add engine utilities for evaluation, simulation, and Lichess integration</h1>
+
+<p><strong>Repository:</strong> <a href="https://github.com/pssnyder/engine-tester">engine-tester</a>
+<strong>Commit:</strong> <a href="https://github.com/pssnyder/engine-tester/commit/aaf1f043d4b8d36fa386717170236b61abfa69e5"><code class="language-plaintext highlighter-rouge">aaf1f043</code></a>
+<strong>Date:</strong> 2025-08-22</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Add engine utilities for evaluation, simulation, and Lichess integration</p>
+
+<h2 id="changes">Changes</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .../analyzers/BLUNDER_ANALYZER_README.md           |    10 +
+ .../V7P3R_vs_SlowMate_Tactical_Analysis_Summary.md |   127 +
+ ...7P3R_v5.1_vs_SlowMate_v3.0_20250822_114044.json |  4099 +++
+ ...7P3R_v5.1_vs_SlowMate_v3.0_20250822_114044.json |   377 +
+ chess-puzzle-challenger/.gitignore                 |    56 +
+ chess-puzzle-challenger/README.md                  |   203 +
+ .../puzzles/enhanced_puzzle_tester.py              |   541 +
+ chess-puzzle-challenger/puzzles/puzzle_tester.py   |   311 +
+ .../puzzles/solved_puzzles.json                    |     1 +
+ chess-puzzle-challenger/pytest.ini                 |    10 +
+ chess-puzzle-challenger/requirements.txt           |     9 +
+ chess-puzzle-challenger/run.bat                    |    56 +
+ chess-puzzle-challenger/run.sh                     |    46 +
+ chess-puzzle-challenger/run_comprehensive_test.bat |    24 +
+ chess-puzzle-challenger/run_engine_comparison.py   |   125 +
+ chess-puzzle-challenger/run_stockfish_test.bat     |    22 +
+ chess-puzzle-challenger/run_stockfish_test.sh      |    30 +
+ chess-puzzle-challenger/run_test.ps1               |    29 +
+ chess-puzzle-challenger/run_tests.py               |    72 +
+ chess-puzzle-challenger/setup.bat                  |    35 +
+ chess-puzzle-challenger/setup.py                   |    22 +
+ chess-puzzle-challenger/setup.sh                   |    35 +
+ chess-puzzle-challenger/setup_stockfish.py         |   143 +
+ chess-puzzle-challenger/src/__init__.py            |     1 +
+ chess-puzzle-challenger/src/cli.py                 |   263 +
+ chess-puzzle-challenger/src/database.py            |   151 +
+ chess-puzzle-challenger/src/engine.py              |   214 +
+ chess-puzzle-challenger/src/engine_comparison.py   |   534 +
+ chess-puzzle-challenger/src/main.py                |    13 +
+ chess-puzzle-challenger/src/solver.py              |   200 +
+ chess-puzzle-challenger/src/visualization.py       |   302 +
+ .../tests/test_puzzle_challenger.py                |   134 +
+ chess-puzzle-challenger/tests/test_stockfish.py    |   146 +
+ chess-puzzle-challenger/verify_stockfish.py        |   192 +
+ elo_testing/rating_games.pgn                       | 29007 -------------------
+ engine_utilities/adaptive_elo_finder.py            |   409 +
+ engine_utilities/engine_benchmark.py               |    52 +
+ engine_utilities/engine_db_manager.py              |   353 +
+ engine_utilities/engine_monitor.app.py             |  1044 +
+ engine_utilities/engine_snapshot.py                |    78 +
+ engine_utilities/etl_monitor.py                    |   540 +
+ engine_utilities/etl_processor.py                  |  1221 +
+ engine_utilities/etl_scheduler.py                  |   426 +
+ engine_utilities/export_eval_games.py              |    33 +
+ engine_utilities/game_simulation_manager.py        |    84 +
+ engine_utilities/lichess_handler.py                |   396 +
+ engine_utilities/puzzle_solver.py                  |   272 +
+ engine_utilities/run_elo_finder.py                 |   104 +
+ engine_utilities/simple_position_solver.py         |     2 +
+ 53 files changed, 13547 insertions(+), 29007 deletions(-)
+</code></pre></div></div>
+
+<h2 id="files-modified">Files Modified</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/analyzers/BLUNDER_ANALYZER_README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/analyzers/elo_rating_system.py</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/dashboard/data/V7P3R_vs_SlowMate_Tactical_Analysis_Summary.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/dashboard/data/comprehensive_engine_report.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/dashboard/data/elo_ratings_report.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/dashboard/data/puzzle_comparison_V7P3R_v5.1_vs_SlowMate_v3.0_20250822_114044.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">analytics_and_dashboard/dashboard/data/tactical_skills_report_V7P3R_v5.1_vs_SlowMate_v3.0_20250822_114044.json</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chess-puzzle-challenger/.gitignore</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chess-puzzle-challenger/README.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chess-puzzle-challenger/puzzles/enhanced_puzzle_tester.py</code></li>
+  <li>… and 43 more files</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+
+<p>This milestone represents a significant step in the evolution of the engine-tester chess engine. The modifications enhance the position evaluation system, affecting how the engine assesses chess positions.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Continue monitoring engine performance</li>
+  <li>Test changes against benchmark positions</li>
+  <li>Consider additional optimizations</li>
+</ul>
+
+<hr />
+
+<p><em>This entry was generated from commit analysis of the engine-tester repository.</em></p>
+
+  </div><div class="post-tags">
+      <strong>Tags:</strong><span class="tag">engine-tester</span>, <span class="tag">milestone</span>, <span class="tag">development</span></div><nav class="post-navigation"><a class="prev" href="/chess-engine/development/2025/08/20/v7p3r-v7p3r-v51-is-now-ready-for-arena-tournament-play.html">&larr; V7P3R: V7P3R v5.1 is now ready for Arena tournament play! 🎉</a><a class="next" href="/chess-engine/development/2025/08/21/engine-tester-v7p3rv60-add-results-for-engine-battle-20250822.html">ENGINE-TESTER: V7P3R_v6.0 & Add results for Engine Battle 20250822 &rarr;</a></nav>
+</article>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pat Snyder - Project Portfolio &amp; Journal</h3>
+        <p>A living portfolio documenting data science projects, chess engine development, and technical explorations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/journal/">Journal</a></li>
+          <li><a href="/notebooks/">Notebooks</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/pssnyder" target="_blank">GitHub</a></li>
+          <li><a href="https://rapidtechconsultants.com/" target="_blank">Main Website</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Latest Update</h4><p><a href="/notebook/2025/08/30/2025-08-30-capstone_project_summary.html">2025 08 30 Capstone Project Summary</a></p>
+          <p><small>August 30, 2025</small></p></div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pat Snyder - Project Portfolio &amp; Journal. All rights reserved.</p>
+      <p><small>Generated with Jekyll • Hosted on GitHub Pages</small></p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
