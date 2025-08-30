@@ -5,35 +5,42 @@
    CSS Custom Properties (Variables)
    ======================================== */
 :root {
-  /* Colors */
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary-color: #64748b;
-  --accent-color: #0ea5e9;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --error-color: #ef4444;
+  /* RTS Brand Colors */
+  --brand-dark: #0D0D0D;
+  --brand-surface: #1A1A1A;
+  --brand-border: #2C2C2C;
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0A0A0;
+  --text-muted: #808080;
+  --accent-primary: #00FFFF;
+  --accent-secondary: #FF00FF;
   
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --text-inverse: #ffffff;
+  /* Semantic Colors */
+  --primary-color: #00FFFF;
+  --primary-hover: #00E6E6;
+  --secondary-color: #A0A0A0;
+  --accent-color: #FF00FF;
+  --success-color: #00FF88;
+  --warning-color: #FFAA00;
+  --error-color: #FF4444;
   
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #e2e8f0;
-  --bg-code: #f1f5f9;
-  --bg-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --text-inverse: #0D0D0D;
   
-  --border-color: #e2e8f0;
-  --border-dark: #cbd5e1;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2C2C2C;
+  --bg-code: #1A1A1A;
+  --bg-hero: linear-gradient(135deg, #00FFFF 0%, #FF00FF 100%);
+  
+  --border-color: #2C2C2C;
+  --border-dark: #3A3A3A;
+  --shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 8px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.5), 0 4px 8px -4px rgb(0 0 0 / 0.4);
   
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -132,13 +139,12 @@ a:hover {
    Header & Navigation
    ======================================== */
 .site-header {
-  background-color: var(--bg-primary);
+  background-color: var(--brand-dark);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .site-nav {
@@ -149,15 +155,16 @@ a:hover {
 }
 
 .site-title {
+  font-family: var(--font-mono);
   font-size: var(--font-size-xl);
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
 .site-title:hover {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--accent-secondary);
 }
 
 .nav-toggle {
@@ -236,17 +243,20 @@ a:hover {
 }
 
 .hero-title {
+  font-family: var(--font-mono);
   font-size: clamp(var(--font-size-3xl), 5vw, 4rem);
   font-weight: 700;
   margin-bottom: var(--spacing-md);
   color: var(--text-inverse);
+  text-shadow: 0 0 20px var(--accent-primary);
 }
 
 .hero-subtitle {
+  font-family: var(--font-mono);
   font-size: var(--font-size-xl);
   font-weight: 400;
   margin-bottom: var(--spacing-lg);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--accent-secondary);
 }
 
 .hero-description {
@@ -254,7 +264,7 @@ a:hover {
   line-height: var(--line-height-relaxed);
   max-width: 800px;
   margin: 0 auto var(--spacing-xl) auto;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary);
 }
 
 .quick-links {
@@ -275,45 +285,50 @@ a:hover {
   text-decoration: none;
   transition: all 0.2s ease;
   border: 2px solid transparent;
+  font-family: var(--font-mono);
 }
 
 .btn-primary {
-  background-color: var(--text-inverse);
-  color: var(--primary-color);
-  border-color: var(--text-inverse);
+  background-color: var(--accent-primary);
+  color: var(--text-inverse);
+  border-color: var(--accent-primary);
 }
 
 .btn-primary:hover {
-  background-color: var(--bg-tertiary);
+  background-color: var(--accent-secondary);
+  color: var(--text-inverse);
+  border-color: var(--accent-secondary);
   text-decoration: none;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 0 20px var(--accent-secondary);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--text-inverse);
-  border-color: var(--text-inverse);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--text-inverse);
-  color: var(--primary-color);
+  background-color: var(--accent-primary);
+  color: var(--text-inverse);
   text-decoration: none;
   transform: translateY(-1px);
+  box-shadow: 0 0 20px var(--accent-primary);
 }
 
 .btn-tertiary {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text-inverse);
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 255, 255, 0.1);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .btn-tertiary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--accent-primary);
   color: var(--text-inverse);
   text-decoration: none;
   transform: translateY(-1px);
+  box-shadow: 0 0 20px var(--accent-primary);
 }
 
 /* ========================================
@@ -339,9 +354,10 @@ a:hover {
 .recent-notebooks h3,
 .featured-projects h3 {
   margin-bottom: var(--spacing-lg);
-  color: var(--text-primary);
-  border-bottom: 2px solid var(--primary-color);
+  color: var(--accent-primary);
+  border-bottom: 2px solid var(--accent-primary);
   padding-bottom: var(--spacing-sm);
+  font-family: var(--font-mono);
 }
 
 /* ========================================
@@ -401,21 +417,23 @@ a:hover {
 
 .tech-tag,
 .tag {
-  background-color: var(--primary-color);
+  background-color: var(--accent-primary);
   color: var(--text-inverse);
   font-size: var(--font-size-xs);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: calc(var(--border-radius) / 2);
   font-weight: 500;
+  font-family: var(--font-mono);
 }
 
 .category {
-  background-color: var(--accent-color);
+  background-color: var(--accent-secondary);
   color: var(--text-inverse);
   font-size: var(--font-size-xs);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: calc(var(--border-radius) / 2);
   font-weight: 500;
+  font-family: var(--font-mono);
 }
 
 /* ========================================
