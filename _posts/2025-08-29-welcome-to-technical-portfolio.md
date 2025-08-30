@@ -1,11 +1,18 @@
 ---
-layout: post
-title: "Welcome to the Technical Portfolio"
+author: Pat Snyder
+categories:
+- meta
+- portfolio
 date: 2025-08-29
-categories: [meta, portfolio]
-tags: [jekyll, github-pages, documentation, portfolio]
-description: "Introduction to this technical portfolio and journal, explaining the philosophy and approach to documenting projects and insights."
-author: "Pat Snyder"
+description: Introduction to this technical portfolio and journal, explaining the
+  philosophy and approach to documenting projects and insights.
+layout: post
+tags:
+- jekyll
+- github-pages
+- documentation
+- portfolio
+title: Welcome to the Technical Portfolio
 ---
 
 # Welcome to My Technical Portfolio

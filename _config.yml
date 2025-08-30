@@ -62,3 +62,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - scripts/
+  - repos/
+  - analysis_results.json
+  - content_suggestions.json
+  - CONTENT_PLAN.md
+  - RTS-color-palette.md
